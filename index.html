@@ -1,0 +1,1806 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="reinigungscout.ch – Reinigungsofferten für Büro, Kanzlei, Praxis und Zuhause kostenlos vergleichen.">
+<title>reinigungscout.ch – Reinigungsofferten vergleichen</title>
+<link rel="canonical" href="https://reinigungscout.ch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@500&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --navy:#0F2A1D; --navy-2:#173826; --blue:#17824A; --blue-d:#106638; --sky:#E1F4E8; --sky-2:#F2FAF5;
+  --bg:#F5F9F6; --card:#FFFFFF; --line:#DCE9E1; --ink:#0F2A1D; --muted:#52685B; --soft:#89A094;
+  --green:#15935A; --green-bg:#E6F6EE; --orange:#D9772B; --orange-bg:#FDF1E6; --red:#E3262F;
+  --r:14px; --r-sm:10px; --shadow:0 1px 2px rgba(15,42,29,.06),0 8px 24px rgba(15,42,29,.06);
+  --font:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;line-height:1.15;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:var(--blue);text-decoration:none}
+button{font:inherit;cursor:pointer}
+input,select,textarea{font:inherit;color:var(--ink)}
+:focus-visible{outline:3px solid rgba(31,157,87,.35);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:20px}
+.ic{display:inline-flex;width:22px;height:22px;flex:none}
+.ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ---------- Logo ---------- */
+.logo{display:inline-flex;flex-direction:column;line-height:1;color:var(--navy);font-weight:800;letter-spacing:-.03em}
+.logo b{font-size:25px;font-weight:800}
+.logo b span{color:var(--blue)}
+.logo small{font-size:8.5px;letter-spacing:.32em;font-weight:600;color:var(--muted);margin-top:4px}
+
+/* ---------- Header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:70px}
+.nav{display:flex;gap:4px;margin-left:12px}
+.nav a{white-space:nowrap;color:var(--muted);font-weight:600;font-size:14px;padding:8px 10px;border-radius:8px}
+.nav a:hover{color:var(--navy);background:var(--sky-2)}
+.top .spacer{flex:1}
+.switch{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px}
+.switch button{border:0;background:transparent;padding:7px 14px;border-radius:999px;font-weight:700;font-size:13px;color:var(--muted);white-space:nowrap}
+.switch button.on{background:var(--navy);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 20px;font-weight:700;font-size:15px;transition:transform .15s,background .15s,box-shadow .15s;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 16px rgba(31,157,87,.28)}
+.btn-primary:hover{background:var(--blue-d)}
+.btn-ghost{background:#fff;color:var(--blue);border:1.5px solid #B9DEC8}
+.btn-ghost:hover{border-color:var(--blue)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-sm{padding:9px 14px;font-size:14px;border-radius:10px}
+.btn-lg{padding:16px 26px;font-size:16px}
+.btn .ic{width:18px;height:18px}
+
+/* ---------- Generic sections ---------- */
+section.sec{padding-block:84px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+.sec-head{max-width:640px;margin-bottom:40px;display:grid;gap:12px}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.sec-head p{color:var(--muted);font-size:17px}
+.hand{font-family:"Caveat","Segoe Script",cursive;font-size:26px;color:var(--navy);line-height:1.1}
+
+/* ---------- Hero (Kunden) ---------- */
+.hero{position:relative;padding-block:56px 72px;background:
+  radial-gradient(1200px 500px at 85% -10%, #DCE8FF 0%, rgba(220,232,255,0) 60%),
+  linear-gradient(180deg,#FFFFFF 0%, var(--bg) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr minmax(0,540px);gap:48px;align-items:start}
+.hero h1{font-size:clamp(40px,5.6vw,68px);font-weight:800;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .lead{font-size:19px;color:var(--muted);margin-top:18px;max-width:30em}
+.hero-points{display:grid;gap:12px;margin-top:28px}
+.hero-points li{display:flex;gap:12px;align-items:center;font-weight:600}
+.hero-points .ic{width:28px;height:28px;padding:5px;border-radius:8px;background:var(--sky);color:var(--blue)}
+ul.clean{list-style:none;margin:0;padding:0}
+.rating{display:flex;align-items:center;gap:14px;margin-top:32px;flex-wrap:wrap}
+.stars{color:#F5B301;letter-spacing:2px;font-size:17px}
+.rating strong{font-size:17px}
+.rating .muted{color:var(--muted);font-size:14px}
+.avatars{display:flex}
+.avatars span{width:34px;height:34px;border-radius:50%;border:2px solid #fff;margin-left:-8px;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff}
+.avatars span:first-child{margin-left:0}
+.swiss{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.24em;font-weight:700;color:var(--muted);margin-top:28px}
+.cross{width:18px;height:18px;background:var(--red);border-radius:3px;position:relative;flex:none}
+.cross:before,.cross:after{content:"";position:absolute;background:#fff;left:50%;top:50%;transform:translate(-50%,-50%)}
+.cross:before{width:10px;height:3px}.cross:after{width:3px;height:10px}
+
+/* ---------- Wizard ---------- */
+.wizard{background:var(--card);border-radius:22px;box-shadow:0 2px 4px rgba(15,42,29,.05),0 24px 60px rgba(15,42,29,.12);border:1px solid var(--line);overflow:hidden}
+.wz-head{padding:22px 24px 16px;border-bottom:1px solid var(--line)}
+.wz-head h3{font-size:20px;font-weight:800}
+.wz-head p{color:var(--muted);font-size:14px;margin-top:4px}
+.steps{display:flex;gap:6px;margin-top:16px}
+.steps .st{flex:1;display:grid;gap:6px;text-align:center;font-size:11.5px;font-weight:600;color:var(--soft)}
+.steps .bar{height:5px;border-radius:9px;background:var(--line)}
+.steps .st.done .bar,.steps .st.cur .bar{background:var(--blue)}
+.steps .st.cur{color:var(--navy)}
+.wz-body{padding:22px 24px}
+.wz-foot{display:flex;gap:10px;justify-content:space-between;align-items:center;padding:16px 24px 22px;border-top:1px solid var(--line);background:var(--sky-2)}
+.wz-foot .hint{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.wz-foot .hint .ic{width:16px;height:16px;color:var(--green)}
+.pane{display:none}
+.pane.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.pane.on{animation:none}html{scroll-behavior:auto}}
+.q{font-weight:700;font-size:16px;margin-bottom:12px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.svc{position:relative;border:1.5px solid var(--line);border-radius:14px;background:#fff;padding:14px 10px 12px;display:grid;justify-items:center;gap:8px;text-align:center;font-weight:700;font-size:13.5px;color:var(--navy);transition:border-color .15s,background .15s}
+.svc small{font-weight:500;color:var(--muted);font-size:11.5px;line-height:1.3}
+.svc .ic{width:30px;height:30px;color:var(--blue)}
+.svc:hover{border-color:#B9DEC8}
+.svc.on{border-color:var(--blue);background:var(--sky-2);box-shadow:0 0 0 3px rgba(31,157,87,.12)}
+.svc .tag{position:absolute;top:-9px;right:8px;background:var(--navy);color:#fff;font-size:10px;padding:2px 7px;border-radius:99px;letter-spacing:.04em}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fields .full{grid-column:1/-1}
+.fld{display:grid;gap:6px}
+.fld label,.lbl{font-size:13px;font-weight:700;color:var(--navy)}
+.fld label i{font-style:normal;color:var(--blue)}
+.inp{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff;font-size:15px;transition:border-color .15s}
+.inp:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,157,87,.12)}
+.inp.err{border-color:#D93A3A;background:#FFF7F7}
+.errmsg{color:#C62828;font-size:12.5px;font-weight:600;display:none}
+.errmsg.on{display:block}
+textarea.inp{min-height:84px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font-size:13.5px;font-weight:600;color:var(--navy);display:inline-flex;align-items:center;gap:6px}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip .ic{width:15px;height:15px}
+.seg{display:flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{flex:1;border:0;background:#fff;padding:10px 6px;font-weight:600;font-size:13.5px;color:var(--muted);border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--sky);color:var(--blue-d)}
+.addr{border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:12px;background:var(--sky-2)}
+.addr + .addr{margin-top:12px}
+.addr h4{display:flex;gap:8px;align-items:center;font-size:15px}
+.addr h4 .dot{width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-size:12px;display:grid;place-items:center}
+.addr h4 .dot.b{background:var(--navy)}
+.drop{border:2px dashed #B9DEC8;border-radius:14px;background:var(--sky-2);padding:20px;display:grid;justify-items:center;gap:6px;text-align:center;color:var(--muted);font-size:13.5px;cursor:pointer}
+.drop strong{color:var(--blue);font-size:15px}
+.drop .ic{width:34px;height:34px;color:var(--blue)}
+.drop input{display:none}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.thumbs div{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--line);max-width:100%}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.thumbs button{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;border:0;background:rgba(15,42,29,.75);color:#fff;font-size:13px;line-height:1}
+.items{display:grid;gap:8px;margin-top:6px}
+.item{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:8px 10px 8px 14px;background:#fff}
+.item span{flex:1;font-weight:600;font-size:14px}
+.stepper{display:flex;align-items:center;gap:4px}
+.stepper button{width:30px;height:30px;border-radius:8px;border:0;background:var(--sky);color:var(--blue);font-weight:800;font-size:17px}
+.stepper output{width:30px;text-align:center;font-weight:700}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--muted)}
+.check input{width:18px;height:18px;margin-top:2px;accent-color:var(--blue);flex:none}
+.estimate{margin-top:18px;border-radius:14px;background:var(--navy);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:14px}
+.estimate .ic{width:34px;height:34px;padding:7px;background:rgba(255,255,255,.12);border-radius:10px}
+.estimate small{display:block;color:#C9C4B8;font-size:12px}
+.estimate strong{font-size:19px}
+.success{text-align:center;display:grid;gap:14px;justify-items:center;padding-block:10px}
+.success .big{width:64px;height:64px;border-radius:50%;background:var(--green-bg);color:var(--green);display:grid;place-items:center}
+.success .big .ic{width:34px;height:34px}
+.success h3{font-size:24px}
+.timeline{display:grid;gap:10px;text-align:left;width:100%;margin-top:6px}
+.timeline div{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+.timeline b{display:block}
+.timeline span.n{width:24px;height:24px;flex:none;border-radius:50%;background:var(--sky);color:var(--blue);font-weight:800;font-size:12px;display:grid;place-items:center}
+.refno{font-family:ui-monospace,Menlo,monospace;background:var(--sky);color:var(--blue-d);padding:4px 10px;border-radius:8px;font-weight:700}
+
+/* ---------- Trust strip ---------- */
+.trust{background:#fff;border-block:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-block:26px}
+.trust div{display:flex;gap:12px;align-items:center}
+.trust .ic{width:40px;height:40px;padding:9px;border-radius:12px;background:var(--sky);color:var(--blue)}
+.trust b{display:block;font-size:15px}
+.trust small{color:var(--muted);font-size:13px}
+
+/* ---------- How ---------- */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.how-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:12px;align-content:start}
+.how-card .num{font-weight:800;color:var(--blue);font-size:14px;letter-spacing:.1em}
+.how-card h3{font-size:21px}
+.how-card p{color:var(--muted)}
+.mini{margin-top:10px;border-radius:14px;background:var(--sky-2);border:1px solid var(--line);padding:14px;display:grid;gap:8px;font-size:13px}
+.mini .row{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-weight:600}
+.mini .row small{color:var(--muted);font-weight:500}
+.mini .ph{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.mini .ph span{aspect-ratio:1;border-radius:8px;background:linear-gradient(135deg,#D7EDE0,#EEF7F1);display:grid;place-items:center;color:var(--soft);font-size:10px;font-weight:700}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:99px}
+.pill.green{background:var(--green-bg);color:var(--green)}
+.pill.blue{background:var(--sky);color:var(--blue-d)}
+.pill.orange{background:var(--orange-bg);color:var(--orange)}
+.pill.gray{background:#EEF1F6;color:var(--muted)}
+
+/* ---------- Services ---------- */
+.svc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:start;transition:border-color .15s,box-shadow .15s}
+.svc-card:hover{border-color:#B9DEC8;box-shadow:var(--shadow)}
+.svc-card .ic{grid-row:span 3;width:48px;height:48px;padding:11px;border-radius:14px;background:var(--sky);color:var(--blue)}
+.svc-card h3{font-size:17px}
+.svc-card p{color:var(--muted);font-size:14px}
+.svc-card button{justify-self:start;margin-top:6px;border:0;background:none;color:var(--blue);font-weight:700;padding:0;display:inline-flex;gap:6px;align-items:center}
+.svc-card button .ic{grid-row:auto;width:16px;height:16px;padding:0;background:none}
+
+/* ---------- Compare showcase ---------- */
+.showcase{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.phone{width:min(340px,100%);margin-inline:auto;border-radius:44px;background:#0B0F1A;padding:12px;box-shadow:0 40px 80px rgba(15,42,29,.22)}
+.screen{border-radius:34px;background:#fff;overflow:hidden;padding:16px 14px 18px;display:grid;gap:10px}
+.screen .sb{display:flex;justify-content:space-between;font-size:12px;font-weight:700;padding:0 8px}
+.screen .notch{width:96px;height:24px;border-radius:14px;background:#0B0F1A;margin:-4px auto 4px}
+.route{display:flex;justify-content:space-between;align-items:center;padding:0 4px}
+.route b{font-size:17px}
+.offer{border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:8px}
+.offer.rec{border:2px solid var(--blue);position:relative}
+.offer.rec:after{content:"★ EMPFOHLEN";position:absolute;top:-10px;right:10px;background:var(--blue);color:#fff;font-size:9.5px;font-weight:800;padding:3px 8px;border-radius:6px;letter-spacing:.05em}
+.offer .top-row{display:flex;justify-content:space-between;gap:8px}
+.offer .firm{font-weight:800;font-size:14px}
+.offer .firm small{display:block;font-weight:600;color:var(--muted);font-size:11.5px}
+.offer .price{text-align:right;font-weight:800;font-size:16px}
+.offer .price small{display:block;color:var(--muted);font-weight:500;font-size:11px}
+.offer .inc{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11.5px;color:var(--muted)}
+.offer .inc span:before{content:"✓ ";color:var(--blue);font-weight:800}
+.offer .acts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.offer .acts button{border-radius:8px;padding:7px;font-size:12px;font-weight:700;border:1.5px solid #B9DEC8;background:#fff;color:var(--blue)}
+.offer .acts button.p{background:var(--blue);color:#fff;border-color:var(--blue)}
+.offer .acts button.done{background:var(--green);border-color:var(--green);color:#fff}
+.feat-list{display:grid;gap:18px;margin-top:26px}
+.feat-list div{display:flex;gap:14px}
+.feat-list .ic{width:44px;height:44px;padding:10px;border-radius:12px;background:#fff;border:1px solid var(--line);color:var(--blue)}
+.feat-list b{display:block;font-size:16px}
+.feat-list p{color:var(--muted);font-size:14.5px}
+
+/* ---------- Benefits ---------- */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.benefits div{background:#fff;padding:28px;display:grid;gap:8px;align-content:start}
+.benefits .ic{width:30px;height:30px;color:var(--blue)}
+.benefits h3{font-size:18px}
+.benefits p{color:var(--muted);font-size:14.5px}
+
+/* ---------- Reviews ---------- */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:14px;align-content:space-between}
+.review q{font-size:16px;font-weight:500;quotes:"«" "»"}
+.review .who{display:flex;gap:12px;align-items:center}
+.review .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800}
+.review .who small{display:block;color:var(--muted);font-size:13px}
+
+/* ---------- App band ---------- */
+.appband{background:var(--navy);color:#fff;border-radius:28px;padding:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.appband:before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(31,157,87,.55),rgba(31,157,87,0) 70%)}
+.appband h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.appband p{color:#C9C4B8;margin-top:12px;font-size:17px}
+.stores{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.store{display:flex;align-items:center;gap:10px;background:#fff;color:var(--navy);border-radius:12px;padding:10px 16px;border:0;font-weight:800;font-size:15px;text-align:left}
+.store small{display:block;font-size:10.5px;font-weight:600;color:var(--muted)}
+.store .ic{width:26px;height:26px}
+.app-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.app-stats div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+.app-stats b{font-size:28px;display:block}
+.app-stats small{color:#C9C4B8}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px;margin:0 auto;display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;font-size:16px;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-size:22px;color:var(--blue);line-height:1}
+.faq details[open] summary:after{content:"–"}
+.faq details p{padding-bottom:18px;color:var(--muted)}
+
+/* ---------- CTA band / contact ---------- */
+.cta-band{background:linear-gradient(120deg,var(--blue) 0%,#0B46B8 100%);color:#fff;border-radius:28px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta-band h2{font-size:clamp(26px,3vw,36px);font-weight:800}
+.cta-band p{color:#E8E4DA;margin-top:8px}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.contact div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;gap:14px;align-items:flex-start}
+.contact .ic{color:var(--blue);width:26px;height:26px}
+.contact b{display:block}
+.contact span{color:var(--muted);font-size:14px;user-select:all}
+
+/* ---------- Footer ---------- */
+footer{background:var(--navy);color:#C9C4B8;padding-block:56px 30px;margin-top:84px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer .logo{color:#fff}
+footer .logo small{color:#9C978B}
+footer h4{color:#fff;font-size:14px;margin-bottom:12px}
+footer a,footer .lnk{color:#C9C4B8;display:block;font-size:14px;padding:3px 0;background:none;border:0;text-align:left}
+footer a:hover,footer .lnk:hover{color:#fff}
+footer .family{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+footer .family span{font-size:12px;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:3px 10px;font-weight:700}
+footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+
+/* ---------- Mobile sticky ---------- */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:45;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 24px rgba(15,42,29,.08)}
+.mbar .btn{width:100%}
+
+/* =================== PARTNER =================== */
+.p-hero{background:var(--navy);color:#fff;padding-block:64px 80px;position:relative;overflow:hidden}
+.p-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 90% 10%,rgba(31,157,87,.45),transparent 70%),radial-gradient(500px 300px at 0% 100%,rgba(31,157,87,.2),transparent 70%)}
+.p-hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.p-hero .eyebrow{color:#1F9D57}
+.p-hero h1{font-size:clamp(38px,5vw,62px);font-weight:800;letter-spacing:-.035em;margin-top:14px}
+.p-hero h1 em{font-style:normal;color:#1F9D57}
+.p-hero .lead{color:#C9C4B8;font-size:18px;margin-top:18px;max-width:32em}
+.p-hero .ctas{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.p-hero .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.p-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px;max-width:520px}
+.p-kpis div{border-left:2px solid rgba(110,160,255,.5);padding-left:14px}
+.p-kpis b{font-size:26px;display:block}
+.p-kpis small{color:#C9C4B8;font-size:13px}
+.p-card{background:#fff;color:var(--ink);border-radius:20px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.35);display:grid;gap:14px}
+.p-card .hd{display:flex;justify-content:space-between;align-items:center}
+.p-card .hd b{font-size:17px}
+.p-card .lead-row{display:grid;grid-template-columns:1fr auto;gap:4px 10px;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.p-card .lead-row b{font-size:15px}
+.p-card .lead-row small{color:var(--muted);font-size:12.5px}
+.p-card .lead-row .pill{align-self:center;grid-row:span 2}
+.p-card .foot{display:flex;gap:10px;align-items:center;background:var(--sky-2);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--muted)}
+.p-card .foot .ic{color:var(--blue)}
+
+.branches{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.branches span{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:10px 16px;border-radius:99px;font-weight:700;font-size:14px}
+.branches .ic{width:18px;height:18px;color:var(--blue)}
+
+.p-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.p-step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:10px;align-content:start;position:relative}
+.p-step .n{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
+.p-step.hl .n{background:var(--blue)}
+.p-step h3{font-size:17px}
+.p-step p{color:var(--muted);font-size:14px}
+.p-note{margin-top:18px;background:var(--sky);border-radius:14px;padding:14px 18px;display:flex;gap:12px;align-items:center;color:var(--navy);font-weight:600}
+.p-note .ic{color:var(--blue)}
+
+/* Dashboard demo */
+.dash{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);display:grid;grid-template-columns:220px 1fr;overflow:hidden;min-height:620px}
+.dash aside{border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:4px;background:#FBFCFE}
+.dash aside .logo{padding:4px 10px 18px}
+.dash aside .logo b{font-size:20px}
+.dnav{display:flex;align-items:center;gap:10px;border:0;background:none;padding:10px 12px;border-radius:10px;font-weight:600;color:var(--muted);font-size:14px;text-align:left}
+.dnav .ic{width:19px;height:19px}
+.dnav .ct{margin-left:auto;background:var(--blue);color:#fff;border-radius:99px;font-size:11px;padding:1px 8px;font-weight:700}
+.dnav.on{background:var(--navy);color:#fff}
+.dnav:hover:not(.on){background:var(--sky-2);color:var(--navy)}
+.dash aside .credit{margin-top:auto;background:var(--sky);border-radius:12px;padding:12px;font-size:12.5px;color:var(--navy)}
+.dash aside .credit b{font-size:20px;display:block}
+.dmain{padding:22px 24px;display:grid;gap:18px;align-content:start;min-width:0}
+.dmain .hi{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.dmain .hi h3{font-size:22px}
+.dmain .hi p{color:var(--muted);font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:2px}
+.kpi small{color:var(--muted);font-size:12.5px;font-weight:600}
+.kpi b{font-size:26px}
+.kpi em{font-style:normal;color:var(--green);font-size:12px;font-weight:700}
+.tbl-wrap{border:1px solid var(--line);border-radius:14px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+th{text-align:left;font-size:12px;color:var(--muted);font-weight:700;padding:11px 14px;background:#FBFCFE;border-bottom:1px solid var(--line)}
+td{padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tr.new td{animation:flash 2.4s ease}
+@keyframes flash{0%,40%{background:#FFF7D6}100%{background:transparent}}
+.dpanel-title{display:flex;justify-content:space-between;align-items:center}
+.dpanel-title b{font-size:16px}
+.cols2{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.box{border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px;align-content:start}
+.flow{display:grid;gap:12px}
+.flow div{display:flex;gap:12px}
+.flow .n{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:12px;font-weight:800;color:var(--muted);flex:none}
+.flow .n.ok{background:var(--green);border-color:var(--green);color:#fff}
+.flow .n.cur{background:var(--blue);border-color:var(--blue);color:#fff}
+.flow b{display:block;font-size:14px}
+.flow small{color:var(--muted);font-size:12.5px}
+.calls div{display:flex;align-items:center;gap:10px;font-size:13.5px;padding:6px 0;border-bottom:1px solid var(--line)}
+.calls div:last-child{border-bottom:0}
+.calls time{font-weight:700;width:46px}
+.calls span{flex:1}
+
+/* Drawer */
+.drawer-bg{position:fixed;inset:0;background:rgba(15,42,29,.45);z-index:60;display:none}
+.drawer-bg.on{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:#fff;z-index:61;transform:translateX(100%);transition:transform .28s ease;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.drawer.on{transform:none}
+.drawer .dh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.drawer .dh b{font-size:18px}
+.drawer .x{border:0;background:var(--bg);width:36px;height:36px;border-radius:10px;display:grid;place-items:center}
+.drawer .db{padding:20px 22px;overflow-y:auto;display:grid;gap:16px;align-content:start;flex:1}
+.drawer .df{padding:14px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:flex;gap:10px}
+.drawer .df .btn{flex:1}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.facts div{background:var(--sky-2);border-radius:10px;padding:10px 12px;font-size:13px}
+.facts small{display:block;color:var(--muted);font-size:11.5px;font-weight:600}
+.facts b{font-size:14px}
+.phgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.phgrid span{aspect-ratio:1;border-radius:10px;background:linear-gradient(135deg,#D7EDE0,#EEF7F1);display:grid;place-items:center;font-size:11px;color:var(--soft);font-weight:700;max-width:100%;overflow:hidden}
+.phgrid img{width:100%;height:100%;object-fit:cover}
+.contactbox{border:1px dashed #B9DEC8;border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.contactbox .mask{font-family:ui-monospace,Menlo,monospace;font-weight:700}
+.oline{display:grid;grid-template-columns:1fr 110px 32px;gap:8px;align-items:center}
+.oline .inp{padding:9px 10px;font-size:14px}
+.oline button{border:0;background:var(--bg);border-radius:8px;height:36px;color:var(--muted)}
+.totals{display:grid;gap:4px;font-size:14px;background:var(--sky-2);border-radius:12px;padding:12px 14px}
+.totals div{display:flex;justify-content:space-between}
+.totals .t{font-size:18px;font-weight:800;border-top:1px solid var(--line);padding-top:6px;margin-top:4px}
+.addline{border:1.5px dashed #B9DEC8;background:#fff;border-radius:10px;padding:9px;color:var(--blue);font-weight:700;font-size:13.5px}
+
+/* Pricing */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px;position:relative}
+.price-card.hl{border:2px solid var(--blue);box-shadow:0 20px 50px rgba(31,157,87,.14)}
+.price-card .badge{position:absolute;top:-12px;left:28px;background:var(--blue);color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:99px;letter-spacing:.06em}
+.price-card h3{font-size:20px}
+.price-card .amt{font-size:38px;font-weight:800;letter-spacing:-.03em}
+.price-card .amt small{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:0}
+.price-card ul{display:grid;gap:8px;flex:1}
+.price-card li{display:flex;gap:8px;font-size:14.5px}
+.price-card li .ic{width:18px;height:18px;color:var(--green);margin-top:2px}
+.price-note{text-align:center;color:var(--muted);font-size:13px;margin-top:16px}
+
+/* Register */
+.reg{display:grid;grid-template-columns:1fr minmax(0,620px);gap:48px;align-items:start}
+.reg-side{display:grid;gap:18px;position:sticky;top:100px}
+.reg-side h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.reg-side p{color:var(--muted);font-size:17px}
+.quote{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;display:grid;gap:10px}
+.kanton{min-width:44px;justify-content:center;padding:7px 10px;font-size:12.5px}
+.range-row{display:flex;align-items:center;gap:12px}
+.range-row input{flex:1;accent-color:var(--blue)}
+.range-row output{font-weight:800;min-width:64px;text-align:right}
+.pk{display:grid;gap:8px}
+.pk label{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer}
+.pk label:has(input:checked){border-color:var(--blue);background:var(--sky-2)}
+.pk input{accent-color:var(--blue);width:18px;height:18px}
+.pk span{flex:1;font-weight:700}
+.pk small{color:var(--muted);font-weight:600}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);background:var(--navy);color:#fff;padding:13px 18px;border-radius:12px;font-weight:600;z-index:80;display:flex;gap:10px;align-items:center;transition:transform .3s ease;max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0)}
+.toast .ic{color:#5FD69B}
+
+[hidden]{display:none!important}
+.view{display:none}
+.view.on{display:block}
+.demo-tag{justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--orange);background:var(--orange-bg);padding:4px 10px;border-radius:99px;text-transform:uppercase}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1180px){.nav{display:none}}
+@media (max-width:1060px){
+  .hero-grid,.showcase,.p-hero .wrap,.reg,.appband{grid-template-columns:1fr}
+  .reg-side{position:static}
+  .p-steps{grid-template-columns:1fr 1fr}
+  .dash{grid-template-columns:1fr}
+  .dash aside{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:10px}
+  .dash aside .logo,.dash aside .credit{display:none}
+  .dnav{white-space:nowrap}
+  .cols2{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .trust .wrap,.kpis{grid-template-columns:1fr 1fr}
+  .how,.svc-list,.benefits,.reviews,.prices,.contact{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .top .btn-top{display:none}
+  .mbar.show{display:block}
+  body.has-mbar{padding-bottom:76px}
+}
+@media (max-width:560px){
+  .wrap{padding-inline:16px}
+  section.sec{padding-block:60px}
+  .top .wrap{gap:10px;height:64px}
+  .logo b{font-size:21px}
+  .logo small{display:none}
+  .switch button{padding:7px 10px;font-size:12px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .fields{grid-template-columns:1fr}
+  .wz-body,.wz-head{padding-inline:16px}
+  .wz-foot{padding-inline:16px;flex-wrap:wrap}
+  .wz-foot .hint{order:3;width:100%}
+  .steps .st span{display:none}
+  .p-steps,.p-kpis{grid-template-columns:1fr}
+  .appband,.cta-band{padding:28px}
+  .app-stats{grid-template-columns:1fr 1fr}
+  footer .cols{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .oline{grid-template-columns:1fr 90px 32px}
+}
+/* ===== v2: logins, modebar, photos, apps, login modal ===== */
+.hero{background:#fff}
+.logins{display:flex;gap:8px}
+.login-btn{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-weight:700;font-size:13.5px;color:var(--navy);white-space:nowrap}
+.login-btn:hover{border-color:var(--blue);color:var(--blue)}
+.login-btn .ic{width:17px;height:17px}
+.login-btn.b2b{background:var(--navy);border-color:var(--navy);color:#fff}
+.login-btn.b2b:hover{background:var(--navy-2);color:#fff}
+.login-btn.in{border-color:var(--green);color:var(--green)}
+.modebar{background:var(--navy);color:#fff}
+.modebar .wrap{display:flex;align-items:center;justify-content:center;gap:14px;padding-block:9px;flex-wrap:wrap}
+.mb-lbl{font-size:13px;color:#B8C6E4;font-weight:600}
+.modebar .switch{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+.modebar .switch button{color:#C9D5EE;display:inline-flex;gap:7px;align-items:center}
+.modebar .switch button .ic{width:16px;height:16px}
+.modebar .switch button.on{background:#fff;color:var(--navy)}
+.polas{display:flex;gap:14px;margin-top:34px;align-items:flex-end;max-width:470px}
+.pola{margin:0;background:#fff;padding:8px 8px 4px;border-radius:5px;box-shadow:0 1px 2px rgba(10,27,63,.08),0 12px 26px rgba(10,27,63,.14);flex:1 1 0;max-width:146px;min-width:0}
+.pola img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px;max-width:100%}
+.pola figcaption{font-family:"Caveat","Segoe Script",cursive;font-size:19px;color:var(--navy);text-align:center;line-height:1.15;padding-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p1{transform:rotate(-3deg)}.p1 img{object-position:50% 88%}
+.p2{transform:rotate(2.5deg) translateY(-12px)}.p2 img{object-position:50% 85%}
+.p3{transform:rotate(-1.2deg)}
+@media (prefers-reduced-motion:reduce){.pola{transform:none}}
+.h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.muted-lg{color:var(--muted);font-size:17px;margin-top:12px;max-width:34em}
+.small{color:var(--muted);font-size:13px;margin-top:10px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story-photos{position:relative;display:grid;grid-template-columns:1.15fr 1fr;gap:14px;padding-bottom:30px}
+.ph{margin:0;border-radius:16px;overflow:hidden;background:var(--line);max-width:100%}
+.ph img{display:block;width:100%;height:100%;object-fit:cover}
+.ph.a{grid-row:span 2}
+.ph.b{aspect-ratio:1/1}
+.ph.c{aspect-ratio:1/1.1}
+.ph.c img{object-position:50% 70%}
+.note{position:absolute;left:10px;bottom:-4px;transform:rotate(-2deg);background:#FFF6C9;padding:4px 12px;border-radius:3px;box-shadow:0 4px 10px rgba(10,27,63,.12);font-size:22px}
+.checklist{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:grid;gap:14px}
+.cl-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.cl-group{display:grid;gap:7px}
+.when{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.04em}
+.checklist label{display:flex;gap:10px;align-items:center;font-size:14.5px;cursor:pointer}
+.checklist input{width:18px;height:18px;accent-color:var(--green);flex:none}
+.checklist label:has(input:checked){color:var(--soft);text-decoration:line-through}
+.price-guide{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+table.pt{min-width:420px;background:#fff}
+.pt td,.pt th{padding:13px 16px}
+.pt th{font-size:12.5px}
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.app-card{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr auto;min-width:0}
+.app-card.dark{background:var(--navy);color:#fff;border-color:var(--navy);grid-template-columns:1fr}
+.app-txt{padding:28px;display:grid;gap:12px;align-content:start;min-width:0}
+.app-tag{display:inline-flex;gap:6px;align-items:center;font-size:12.5px;font-weight:700;color:var(--blue);justify-self:start}
+.app-tag .ic{width:16px;height:16px}
+.dark .app-tag{color:#7FAAFF}
+.app-txt h3{font-size:24px}
+.app-txt p{color:var(--muted)}
+.dark .app-txt p{color:#B8C6E4}
+.app-card .stores{margin-top:4px}
+.app-card:not(.dark) .store{background:var(--navy);color:#fff}
+.app-card:not(.dark) .store small{color:#B8C6E4}
+a.store{text-decoration:none}
+.qr-row{display:flex;gap:12px;align-items:center;margin-top:4px}
+.qr{width:84px;height:84px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:4px;display:block;flex:none}
+.qr svg{width:100%;height:100%;display:block}
+.qr-row small{color:var(--muted);font-size:13px;max-width:14em}
+.dark .qr-row small{color:#B8C6E4}
+.app-shot.k{width:210px;align-self:end;padding:24px 20px 0 0}
+.app-shot.k img{display:block;width:100%}
+.app-shot.b{padding:0 20px 20px}
+.app-shot.b img{border-radius:14px;display:block;width:100%}
+.cities{display:flex;flex-wrap:wrap;gap:8px}
+.cities a{background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-weight:600;color:var(--navy);font-size:14px}
+.cities a:hover{border-color:var(--blue);color:var(--blue)}
+.life{display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:48px;align-items:center}
+.life-ph{margin:0;border-radius:20px;overflow:hidden;aspect-ratio:360/420;max-width:100%}
+.life-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.life-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.life-facts div{border-left:2px solid var(--blue);padding-left:12px}
+.life-facts b{font-size:24px;display:block}
+.life-facts small{color:var(--muted)}
+.modal-bg{position:fixed;inset:0;background:rgba(10,27,63,.5);z-index:70;display:none}
+.modal-bg.on{display:block}
+.modal{position:fixed;z-index:71;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,calc(100% - 32px));max-height:calc(100% - 32px);overflow-y:auto;background:#fff;border-radius:22px;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,.3);display:grid;gap:16px}
+.modal .x{position:absolute;top:16px;right:16px;border:0;background:var(--bg);width:34px;height:34px;border-radius:10px;display:grid;place-items:center}
+.modal .x .ic{width:18px;height:18px}
+.lg-tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--bg);border-radius:12px;padding:4px;margin-right:44px}
+.lg-tabs button{border:0;background:none;padding:9px 6px;border-radius:9px;font-weight:700;font-size:13.5px;color:var(--muted);display:inline-flex;gap:6px;justify-content:center;align-items:center;white-space:nowrap}
+.lg-tabs button.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(10,27,63,.12)}
+.lg-tabs .ic{width:16px;height:16px}
+#lgForm,#lg,#lgDone{display:grid;gap:14px}
+#lgTitle,#lgDone h3{font-size:22px}
+.lg-sub{color:var(--muted);font-size:14px;margin-top:-8px}
+.lg-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.linkbtn{border:0;background:none;color:var(--blue);font-weight:700;font-size:13.5px;padding:0}
+.lg-info{background:var(--green-bg);color:var(--green);border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:600}
+.lg-alt{font-size:13.5px;color:var(--muted);text-align:center;border-top:1px solid var(--line);padding-top:14px}
+.acc-req{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--sky-2);border-radius:12px;padding:12px 14px}
+.acc-req small,.acc-off small{display:block;color:var(--muted);font-size:12.5px}
+.acc-off{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+@media (max-width:1060px){.story-grid,.price-guide,.life,.apps{grid-template-columns:1fr}.life-ph{max-width:380px}}
+@media (max-width:860px){.login-btn span{display:none}.login-btn{padding:8px 10px}}
+@media (max-width:560px){
+  .mb-lbl{display:none}
+  .modebar .switch button{padding:7px 10px;font-size:12px}
+  .app-card{grid-template-columns:1fr}
+  .app-shot.k{justify-self:center;padding:0 0 0;width:190px}
+  .app-txt{padding:22px}
+  .life-facts{grid-template-columns:1fr 1fr 1fr}
+  .life-facts b{font-size:19px}
+  .polas{gap:10px}
+  .pola figcaption{font-size:16px}
+}
+.price-guide>*,.story-grid>*,.life>*{min-width:0}
+.logo small{white-space:nowrap}
+@media (max-width:1360px){.nav a[href="#k-compare"],.nav a[href="#k-reviews"]{display:none}}
+
+.dmain>*{min-width:0}
+.src{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:#EEF1F6;color:#44506A;white-space:nowrap}
+.src.umzugscout{background:#E3ECFF;color:#1446B8}
+.src.malerscout{background:#FFF1BF;color:#7A5600}
+.src.reinigungscout{background:#DDF3E6;color:#136B3E}
+.src.entsorgungscout{background:#F7E1E3;color:#8E2F37}
+.dash aside .logo small{display:block;font-size:8.5px;letter-spacing:.28em;color:var(--muted);margin-top:4px}
+footer .family .fam-main{border-color:rgba(255,255,255,.5);color:#fff}
+.lg-hub{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);background:var(--sky-2);border-radius:10px;padding:8px 12px}
+
+/* ===== brand: reinigungscout.ch ===== */
+:root{--y:#1F9D57;--y-d:#17824A;--on:#fff;--on-m:rgba(255,255,255,.8);--mark:#BDE7CD;--hl:rgba(255,255,255,.22)}
+.logo b span{color:var(--y);background:none;padding:0}
+footer .logo b span{color:#fff;background:none;color:var(--y)}
+.hero h1 em{color:var(--ink);background:linear-gradient(transparent 62%,var(--mark) 62%,var(--mark) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.btn-primary{background:var(--y);color:var(--on);box-shadow:0 6px 16px rgba(31,157,87,.3)}
+.btn-primary:hover{background:var(--y-d)}
+.btn-ghost{color:var(--ink)}
+.switch button.on{background:var(--y);color:var(--on)}
+.modebar{background:var(--y);color:var(--on)}
+.mb-lbl{color:var(--on-m)}
+.modebar .switch{background:rgba(255,255,255,.25);border-color:rgba(0,0,0,.12)}
+.modebar .switch button{color:var(--on-m)}
+.modebar .switch button.on{background:var(--on);color:#17824A}
+.chip.on{background:var(--y);border-color:var(--y-d);color:var(--on)}
+.estimate{background:var(--y);color:var(--on)}
+.estimate small{color:var(--on-m)}
+.estimate .ic{background:rgba(255,255,255,.3)}
+.steps .st.done .bar,.steps .st.cur .bar{background:var(--y-d)}
+.svc.on{border-color:var(--y-d);background:var(--sky-2)}
+.addr h4 .dot{background:var(--y);color:var(--on)}
+.offer.rec{border-color:var(--y-d)}
+.offer.rec:after{background:var(--y);color:var(--on)}
+.offer .acts button.p{background:var(--y);border-color:var(--y-d);color:var(--on)}
+.p-hero{background:var(--y);color:var(--on)}
+.p-hero:before{background:radial-gradient(700px 400px at 90% 10%,rgba(255,255,255,.35),transparent 70%)}
+.p-hero .eyebrow{color:var(--on-m)}
+.p-hero h1 em{color:var(--on);background:linear-gradient(transparent 62%,var(--hl) 62%,var(--hl) 94%,transparent 94%)}
+.p-hero .lead,.p-kpis small{color:var(--on-m)}
+.p-hero .btn-primary{background:var(--on);color:#17824A;box-shadow:none}
+.p-hero .btn-ghost{color:var(--on);border-color:var(--on-m);background:transparent}
+.p-kpis div{border-left-color:var(--on-m)}
+.dnav.on{background:var(--y);color:var(--on)}
+.dnav .ct{background:var(--ink);color:#fff}
+.p-step.hl .n{background:var(--y);color:var(--on)}
+.flow .n.cur{background:var(--y);border-color:var(--y-d);color:var(--on)}
+.price-card.hl{border-color:var(--y-d);box-shadow:0 20px 50px rgba(31,157,87,.18)}
+.price-card .badge{background:var(--y);color:var(--on)}
+.app-card.dark{background:var(--y);color:var(--on);border-color:var(--y-d)}
+.dark .app-tag{color:var(--on)}
+.dark .app-txt p,.dark .qr-row small{color:var(--on-m)}
+.cta-band{background:var(--y);color:var(--on)}
+.cta-band p{color:var(--on-m)}
+.cta-band .btn-white,.cta-band .btn-primary{background:var(--on);color:#17824A;box-shadow:none}
+.pill.blue{background:var(--sky);color:var(--blue-d)}
+.stepper button{color:var(--ink)}
+.eyebrow{color:var(--blue)}
+/* painted cards instead of photos */
+.pola .swc{aspect-ratio:3/4;border-radius:2px;display:grid;place-items:center;position:relative;overflow:hidden}
+.pola .swc:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.28),rgba(255,255,255,0) 40%,rgba(0,0,0,.05))}
+.pola .swc .ic{width:46%;height:46%;color:var(--blue)}
+.pola .swc .ic svg{stroke-width:1.4}
+.pola .code{display:block;text-align:center;font:600 10.5px/1.2 ui-monospace,Menlo,monospace;color:var(--muted);padding-bottom:3px;letter-spacing:.02em}
+.fan{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;gap:14px;position:relative}
+.fan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fan-grid div{border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.fan-grid span{display:block;aspect-ratio:4/3}
+.fan-grid b{display:block;font-size:13px;padding:7px 9px 0}
+.fan-grid small{display:block;font:600 10.5px ui-monospace,Menlo,monospace;color:var(--muted);padding:0 9px 8px}
+.plan-row{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.plan-row:last-child{border-bottom:0}
+.plan-row .dot{width:12px;height:12px;border-radius:50%;flex:none}
+.plan-row b{min-width:110px}
+.plan-row span{color:var(--muted)}
+.fan .note{position:static;justify-self:start;margin-top:4px}
+.mockphone{width:210px;border-radius:32px;background:#16140F;padding:9px;align-self:end;margin:24px 20px 0 0;border-bottom-left-radius:0;border-bottom-right-radius:0;padding-bottom:0}
+.mockphone .scr{background:#fff;border-radius:24px 24px 0 0;padding:16px 12px 18px;display:grid;gap:8px}
+.mockphone .scr .logo b{font-size:15px}
+.mockphone .scr p{font-weight:800;font-size:14px;line-height:1.2}
+.mockphone .tiles{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.mockphone .tiles span{border:1px solid var(--line);border-radius:10px;padding:8px 6px;display:grid;gap:4px;font-size:10.5px;font-weight:700;justify-items:start}
+.mockphone .tiles .ic{width:18px;height:18px;color:var(--blue)}
+.mockphone .mbtn{background:var(--y);color:var(--on);border-radius:9px;text-align:center;font-size:11px;font-weight:800;padding:8px}
+.app-shot.b .p-card{box-shadow:0 14px 34px rgba(0,0,0,.15);gap:10px;padding:16px}
+.paper{background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 20px 40px rgba(0,0,0,.1);padding:24px;display:grid;gap:10px;transform:rotate(-1.2deg);max-width:420px;font-size:13.5px}
+.paper-h{display:flex;justify-content:space-between;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:10px;flex-wrap:wrap}
+.paper-h small{color:var(--muted)}
+.paper-r{display:grid;grid-template-columns:1fr auto;gap:2px 10px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.paper-r small{color:var(--muted);grid-column:1}
+.paper-r b{grid-row:1/span 2;grid-column:2;align-self:center;font-variant-numeric:tabular-nums}
+.paper-t{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+.paper-t.big{font-weight:800;font-size:16px;border-top:2px solid var(--ink);padding-top:8px}
+.paper .hand{font-size:22px;color:var(--blue);transform:rotate(-3deg);justify-self:end}
+.fam-note{display:flex;gap:12px;align-items:center;margin-top:30px;font-size:14px;color:var(--muted);flex-wrap:wrap}
+.fam-note b{color:var(--ink)}
+.examples{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.example{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:12px;align-content:space-between}
+.example .ic{width:40px;height:40px;padding:9px;border-radius:12px;background:var(--sky);color:var(--blue)}
+.example p{font-size:16px;font-weight:600}
+.example .pr{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--muted)}
+.example .pr b{color:var(--ink);font-size:17px}
+@media (max-width:860px){.examples{grid-template-columns:1fr}}
+@media (max-width:560px){.mockphone{justify-self:center;margin:0}.fan-grid{grid-template-columns:repeat(2,1fr)}}
+
+.lnk-imp{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.lnk-imp:hover{color:#fff}
+.modal.imp{width:min(640px,calc(100% - 32px));gap:10px;padding:28px}
+.modal.imp h3{font-size:22px;margin-right:44px}
+.modal.imp h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 0 2px}
+.modal.imp p{font-size:14.5px;line-height:1.55;color:var(--navy)}
+.modal.imp a{color:var(--blue);text-decoration:underline}
+.modal[hidden]{display:none}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#kunden" data-go="kunden" aria-label="reinigungscout.ch Startseite"><b>reinigung<span>scout</span>.ch</b><small>REINIGUNG. SCHWEIZWEIT.</small></a>
+    <nav class="nav" id="navK">
+      <a href="#k-how">So funktioniert's</a><a href="#k-services">Leistungen</a><a href="#k-compare">Angebote</a><a href="#k-reviews">Beispiele</a><a href="#k-faq">FAQ</a>
+    </nav>
+    <nav class="nav" id="navP" hidden>
+      <a href="#p-how">Ablauf</a><a href="#p-dash">Dashboard</a><a href="#p-prices">Preise</a><a href="#p-faq">FAQ</a>
+    </nav>
+    <div class="spacer"></div>
+    <div class="logins">
+      <button type="button" class="login-btn" data-login="kunde"><i class="ic" data-i="user"></i><span>Kunden-Login</span></button>
+      <button type="button" class="login-btn b2b" data-login="firma"><i class="ic" data-i="truck"></i><span>B2B-Login</span></button>
+    </div>
+    <a class="btn btn-primary btn-sm btn-top" id="topCta" href="#anfrage">Offerten anfordern</a>
+  </div>
+</header>
+<div class="modebar">
+  <div class="wrap">
+    <span class="mb-lbl">Vorschau ansehen als:</span>
+    <div class="switch" role="tablist" aria-label="Ansicht wählen">
+      <button id="swK" class="on" data-go="kunden" role="tab"><i class="ic" data-i="user"></i>Privatkunde</button>
+      <button id="swP" data-go="partner" role="tab"><i class="ic" data-i="truck"></i>Reinigungsfirma</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================ -->
+<!-- ========================= KUNDEN VIEW ========================== -->
+<!-- ================================================================ -->
+<main id="view-kunden" class="view on">
+
+<section class="hero" id="anfrage">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Reinigung für Büro und Zuhause</span>
+      <h1 style="margin-top:14px">Blitzsauber.<br><em>Ohne Suchaufwand.</em></h1>
+      <p class="lead">Ob Kanzlei in Zug, Arztpraxis in Bern oder Endreinigung Ihrer Wohnung in Zürich: Beschreiben Sie Ihren Reinigungsbedarf einmal und erhalten Sie bis zu 5 Offerten von geprüften Schweizer Reinigungsfirmen. Kostenlos und unverbindlich.</p>
+      <ul class="clean hero-points"><li><i class="ic" data-i="check"></i>100 % kostenlos und unverbindlich</li><li><i class="ic" data-i="building"></i>Für Firmen (B2B) und Privatkunden (B2C)</li><li><i class="ic" data-i="calendar"></i>Einmalig oder im Abo, auch abends und am Wochenende</li></ul>
+      <div class="polas" aria-hidden="true"><figure class="pola p1"><div class="swc" style="background:#E1F4E8"><i class="ic" data-i="building"></i></div><figcaption>Kanzlei, 18:30</figcaption><span class="code">2× pro Woche</span></figure><figure class="pola p2"><div class="swc" style="background:#F2FAF5"><i class="ic" data-i="sparkle"></i></div><figcaption>Abnahme bestanden</figcaption><span class="code">Endreinigung</span></figure><figure class="pola p3"><div class="swc" style="background:#E6F0F4"><i class="ic" data-i="window"></i></div><figcaption>Fenster glänzen</figcaption><span class="code">innen + aussen</span></figure></div>
+      <div class="fam-note"><span class="cross"></span><span>Ein Portal der Scout-Familie von <b>umzugscout.ch</b>. Alle Anfragen laufen sicher über <b>auftragscout.ch</b>.</span></div>
+    </div>
+
+    <!-- ===== Wizard ===== -->
+    <form class="wizard" id="wz" novalidate>
+      <div class="wz-head">
+        <h3 id="wzTitle">Was dürfen wir für Sie reinigen?</h3>
+        <p id="wzSub">Kostenlos Offerten erhalten, Schritt 1 von 5</p>
+        <div class="steps" id="wzSteps">
+          <div class="st cur"><div class="bar"></div><span>Service</span></div>
+          <div class="st"><div class="bar"></div><span>Details</span></div>
+          <div class="st"><div class="bar"></div><span>Adresse</span></div>
+          <div class="st"><div class="bar"></div><span>Fotos</span></div>
+          <div class="st"><div class="bar"></div><span>Kontakt</span></div>
+        </div>
+      </div>
+
+      <div class="wz-body">
+        <!-- Step 1 -->
+        <div class="pane on" data-step="1">
+          <div class="svc-grid" id="svcGrid"></div>
+          <p class="errmsg" id="err-svc" style="margin-top:10px">Bitte wählen Sie einen Service aus.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="pane" data-step="2">
+          <div class="fields">
+            <div class="fld">
+              <label for="f-date">Wunschtermin <i>*</i></label>
+              <input class="inp" type="date" id="f-date">
+              <span class="errmsg" id="err-date">Bitte Datum wählen.</span>
+            </div>
+            <div class="fld">
+              <span class="lbl">Flexibilität</span>
+              <div class="seg" id="f-flex"><button type="button" class="on" data-v="fix">Fix</button><button type="button" data-v="±3">± 3 Tage</button><button type="button" data-v="±7">± 1 Woche</button></div>
+            </div>
+            <div class="fld full" id="g-size">
+              <span class="lbl" id="sizeLbl">Wohnungsgrösse <i style="font-style:normal;color:var(--blue)">*</i></span>
+              <div class="chips" id="f-size"></div>
+              <span class="errmsg" id="err-size">Bitte Grösse wählen.</span>
+            </div>
+            <div class="fld full" id="g-clean">
+              <span class="lbl" id="umfLbl">Häufigkeit und Art</span>
+              <div class="chips" id="f-clean"></div>
+            </div>
+            <div class="fld full">
+              <span class="lbl">Zusatzleistungen</span>
+              <div class="chips" id="f-extra"></div>
+            </div>
+          </div>
+          <div class="estimate" id="est">
+            <i class="ic" data-i="bolt"></i>
+            <div><small>Unverbindliche Preisschätzung</small><strong class="tnum" id="estVal">–</strong></div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="pane" data-step="3">
+          <div class="addr">
+            <h4><span class="dot">A</span><span id="addrALbl">Auszugsadresse</span></h4>
+            <div class="fields">
+              <div class="fld full"><label for="a-str">Strasse und Nr.</label><input class="inp" id="a-str" placeholder="Bahnhofstrasse 12" autocomplete="street-address"></div>
+              <div class="fld"><label for="a-plz">PLZ und Ort <i>*</i></label><input class="inp" id="a-plz" placeholder="8001 Zürich"><span class="errmsg" id="err-a">Bitte PLZ und Ort angeben.</span></div>
+              <div class="fld"><label for="a-fl">Etage</label><select class="inp" id="a-fl"><option>Erdgeschoss</option><option>1. Stock</option><option selected>2. Stock</option><option>3. Stock</option><option>4. Stock</option><option>5+ Stock</option></select></div>
+              <div class="fld full"><span class="lbl">Lift vorhanden?</span><div class="seg" id="a-lift"><button type="button" data-v="ja">Ja</button><button type="button" class="on" data-v="nein">Nein</button></div></div>
+            </div>
+          </div>
+          <div class="addr" id="addrB">
+            <h4><span class="dot b">B</span>Einzugsadresse</h4>
+            <div class="fields">
+              <div class="fld full"><label for="b-str">Strasse und Nr.</label><input class="inp" id="b-str" placeholder="Steinenvorstadt 5"></div>
+              <div class="fld"><label for="b-plz">PLZ und Ort <i>*</i></label><input class="inp" id="b-plz" placeholder="4051 Basel"><span class="errmsg" id="err-b">Bitte PLZ und Ort angeben.</span></div>
+              <div class="fld"><label for="b-fl">Etage</label><select class="inp" id="b-fl"><option>Erdgeschoss</option><option selected>1. Stock</option><option>2. Stock</option><option>3. Stock</option><option>4. Stock</option><option>5+ Stock</option></select></div>
+              <div class="fld full"><span class="lbl">Lift vorhanden?</span><div class="seg" id="b-lift"><button type="button" class="on" data-v="ja">Ja</button><button type="button" data-v="nein">Nein</button></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="pane" data-step="4">
+          <p class="q" style="margin-bottom:4px">Fotos der Räume</p>
+          <p style="color:var(--muted);font-size:13.5px;margin-bottom:12px">Mit Fotos von Böden, Sanitär und Fenstern schätzen Firmen den Aufwand genauer ein.</p>
+          <label class="drop" for="f-photos">
+            <i class="ic" data-i="camera"></i>
+            <strong>Fotos hinzufügen</strong>
+            JPG, PNG, HEIC · Räume, Böden, Sanitär, Fenster
+            <input type="file" id="f-photos" accept="image/*" multiple>
+          </label>
+          <div class="thumbs" id="thumbs"></div>
+          <p class="q" style="margin:20px 0 6px">Räume und Details</p>
+          <div class="items" id="items"></div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="pane" data-step="5">
+          <div class="fields">
+            <div class="fld full"><span class="lbl">Anrede</span><div class="seg" id="c-sal"><button type="button" class="on" data-v="Herr">Herr</button><button type="button" data-v="Frau">Frau</button><button type="button" data-v="Divers">Divers</button></div></div>
+            <div class="fld"><label for="c-fn">Vorname <i>*</i></label><input class="inp" id="c-fn" autocomplete="given-name"><span class="errmsg" id="err-fn">Bitte Vorname angeben.</span></div>
+            <div class="fld"><label for="c-ln">Nachname <i>*</i></label><input class="inp" id="c-ln" autocomplete="family-name"><span class="errmsg" id="err-ln">Bitte Nachname angeben.</span></div>
+            <div class="fld"><label for="c-em">E-Mail <i>*</i></label><input class="inp" id="c-em" type="email" autocomplete="email" placeholder="name@beispiel.ch"><span class="errmsg" id="err-em">Bitte gültige E-Mail angeben.</span></div>
+            <div class="fld"><label for="c-ph">Telefon <i>*</i></label><input class="inp" id="c-ph" type="tel" autocomplete="tel" placeholder="+41 79 123 45 67"><span class="errmsg" id="err-ph">Bitte Telefonnummer angeben.</span></div>
+            <div class="fld full"><span class="lbl">Bevorzugter Kontakt</span><div class="seg" id="c-way"><button type="button" data-v="E-Mail">E-Mail</button><button type="button" data-v="Telefon">Telefon</button><button type="button" class="on" data-v="Beides">Beides</button></div></div>
+            <div class="fld full"><label for="c-note">Hinweise für die Firmen (optional)</label><textarea class="inp" id="c-note" placeholder="z. B. Reinigung nur nach 18 Uhr, Schlüssel beim Empfang, Wohnungsabgabe am 30.11. um 10 Uhr"></textarea></div>
+            <label class="check full"><input type="checkbox" id="c-ok"> Ich akzeptiere die AGB und die Datenschutzerklärung. Meine Anfrage wird anonymisiert an max. 5 passende Reinigungsfirmen weitergeleitet.</label>
+            <span class="errmsg full" id="err-ok">Bitte AGB und Datenschutz bestätigen.</span>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div class="pane" data-step="6">
+          <div class="success">
+            <div class="big"><i class="ic" data-i="check"></i></div>
+            <h3>Danke, <span id="okName">Ihre Anfrage</span> ist eingegangen!</h3>
+            <p style="color:var(--muted)">Anfragenummer <span class="refno" id="okRef">US-0000</span>. Eine Bestätigung ist unterwegs an <b id="okMail"></b>.</p>
+            <div class="timeline">
+              <div><span class="n">1</span><p><b>Jetzt</b>Ihre Anfrage ist bei auftragscout.ch eingegangen, der Plattform hinter allen Scout-Portalen. Wir leiten sie anonymisiert an passende Reinigungsfirmen in Ihrer Region weiter.</p></div>
+              <div><span class="n">2</span><p><b>Innert 24 Stunden</b>Sie erhalten bis zu 5 Offerten per E-Mail und in der App.</p></div>
+              <div><span class="n">3</span><p><b>Sie entscheiden</b>Offerten vergleichen, Fragen stellen und das beste Angebot annehmen.</p></div>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px">
+              <button type="button" class="btn btn-primary" data-go="partner" data-anchor="p-dash">So sieht die Firma Ihre Anfrage <i class="ic" data-i="arrow"></i></button>
+              <button type="button" class="btn btn-ghost" id="wzReset">Neue Anfrage</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wz-foot" id="wzFoot">
+        <button type="button" class="btn btn-ghost" id="wzBack" hidden>Zurück</button>
+        <span class="hint"><i class="ic" data-i="shield"></i>SSL-verschlüsselt · Daten nur an geprüfte Partner</span>
+        <button type="button" class="btn btn-primary" id="wzNext">Weiter <i class="ic" data-i="arrow"></i></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap"><div><i class="ic" data-i="check"></i><p><b>Kostenlos</b><small>Für Sie ohne Gebühren</small></p></div><div><i class="ic" data-i="shield"></i><p><b>Geprüfte Firmen</b><small>Versicherung und Referenzen</small></p></div><div><i class="ic" data-i="building"></i><p><b>B2B und Privat</b><small>Kanzlei, Praxis, Zuhause</small></p></div><div><i class="ic" data-i="clock"></i><p><b>Antwort in 24 h</b><small>Meist schon am selben Tag</small></p></div></div>
+</div>
+
+<section class="sec" id="k-how">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">So funktioniert's</span><h2>In drei Schritten zur passenden Reinigungsfirma</h2><p>Sie beschreiben Ihren Bedarf einmal, ob einmalig oder im Abo. Wir finden die passenden Firmen.</p></div>
+    <div class="how"><div class="how-card"><span class="num">SCHRITT 1</span><h3>Bedarf beschreiben</h3><p>Objekt, Fläche und Häufigkeit angeben. Sie sehen sofort eine Preisschätzung.</p><div class="mini"><div class="row"><span>Büroreinigung</span><span class="pill blue">Gewählt</span></div><div class="row"><span>180 m² · 2× pro Woche</span><small>Zug</small></div></div></div><div class="how-card"><span class="num">SCHRITT 2</span><h3>Fotos hochladen</h3><p>Fotos von Räumen, Böden und Fenstern helfen den Firmen, genau zu offerieren.</p><div class="mini"><div class="ph"><span>Empfang</span><span>Büro</span><span>Küche</span><span>WC</span></div><div class="row"><span>8 Arbeitsplätze · 12 Fenster</span><small>Details</small></div></div></div><div class="how-card"><span class="num">SCHRITT 3</span><h3>Offerten vergleichen</h3><p>Bis zu 5 Offerten mit Leistungsverzeichnis und Fixpreis pro Einsatz oder Monat.</p><div class="mini"><div class="row"><span>Offerte A · ★ 4.8</span><b class="tnum">CHF 1'290 / Mt.</b></div><div class="row"><span>Offerte B · ★ 4.6</span><b class="tnum">CHF 1'420 / Mt.</b></div></div></div></div>
+  </div>
+</section>
+
+<section class="sec" id="k-services" style="background:#fff;border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Leistungen</span><h2>Reinigung für Büro, Praxis und Zuhause</h2><p>Wählen Sie einen Service und starten Sie direkt Ihre Anfrage.</p></div>
+    <div class="svc-list" id="svcList"></div>
+  </div>
+</section>
+
+<section class="sec" id="k-compare">
+  <div class="wrap showcase">
+    <div>
+      <span class="eyebrow">Offerten vergleichen</span>
+      <h2 style="font-size:clamp(28px,3.4vw,40px);font-weight:800;margin-top:12px">Offerten vergleichen. Den richtigen Partner finden.</h2>
+      <p style="color:var(--muted);font-size:17px;margin-top:12px">Alle Offerten erscheinen übersichtlich in Ihrem Konto: was gereinigt wird, wie oft, zu welchen Zeiten und zu welchem Preis.</p>
+      <div class="feat-list"><div><i class="ic" data-i="shield"></i><p><b>Geprüfte Reinigungsfirmen</b>Mit Versicherung, Referenzen und festen Teams.</p></div><div><i class="ic" data-i="file"></i><p><b>Klare Leistungsverzeichnisse</b>Was, wie oft und wann: alles schriftlich in der Offerte.</p></div><div><i class="ic" data-i="key"></i><p><b>Diskret und zuverlässig</b>Schlüsselprotokoll und Vertraulichkeit für Kanzleien und Praxen.</p></div></div>
+      <a class="btn btn-primary btn-lg" href="#anfrage" style="margin-top:28px">Jetzt Offerten anfordern <i class="ic" data-i="arrow"></i></a>
+    </div>
+    <div>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span>●●● ▮</span></div><div class="notch"></div>
+        <div class="route"><b>Kanzlei Zug</b><span class="pill green">3 Angebote</span></div>
+        <div style="display:flex;gap:10px;font-size:12px;color:var(--muted);padding:0 4px">180 m² · 2× pro Woche · 6 Fotos</div>
+        <div class="offer rec"><div class="top-row"><div class="firm">Glanzwerk Reinigung AG<small>★ 4.8 (93) · Antwort in 2 Std.</small></div><div class="price tnum">CHF 1'290<small>pro Monat</small></div></div><div class="inc"><span>Büros & Böden</span><span>Sanitär</span><span>Kaffeeküche</span><span>Material inkl.</span></div><div class="acts"><button type="button">Ansehen</button><button type="button" class="p accept">Annehmen</button></div></div><div class="offer"><div class="top-row"><div class="firm">Sauberteam GmbH<small>★ 4.6 (61) · Antwort in 4 Std.</small></div><div class="price tnum">CHF 1'420<small>pro Monat</small></div></div><div class="inc"><span>Büros & Böden</span><span>Sanitär</span><span>Material inkl.</span></div><div class="acts"><button type="button">Ansehen</button><button type="button" class="p accept">Annehmen</button></div></div><div class="offer"><div class="top-row"><div class="firm">Blitzblank Services<small>★ 4.5 (38) · Antwort in 6 Std.</small></div><div class="price tnum">CHF 1'560<small>pro Monat</small></div></div><div class="acts"><button type="button">Ansehen</button><button type="button" class="p accept">Annehmen</button></div></div>
+        <p style="text-align:center;font-size:11px;color:var(--soft)">Beispielansicht mit Musterfirmen</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="k-story" style="padding-top:0">
+  <div class="wrap story-grid">
+    <div><div class="fan"><b>Reinigungsplan Kanzlei (Beispiel)</b><div><div class="plan-row"><span class="dot" style="background:#1F9D57"></span><b>Montag</b><span>Büros, Böden, Papierkörbe</span></div><div class="plan-row"><span class="dot" style="background:#1F9D57"></span><b>Mittwoch</b><span>Sanitär und Kaffeeküche</span></div><div class="plan-row"><span class="dot" style="background:#1F9D57"></span><b>Freitag</b><span>Empfang, Sitzungszimmer, Glas</span></div><div class="plan-row"><span class="dot" style="background:#7CC49A"></span><b>Monatlich</b><span>Fenster innen</span></div><div class="plan-row"><span class="dot" style="background:#B9DEC8"></span><b>Quartal</b><span>Teppich-Tiefenreinigung</span></div><div class="plan-row"><span class="dot" style="background:#0F2A1D"></span><b>Zeit</b><span>ab 18:30, festes Team</span></div></div><p class="hand note">Diskret nach Feierabend</p></div></div>
+    <div class="story-txt">
+      <h2 class="h2">Für Kanzleien, Praxen und Zuhause.</h2>
+      <p class="muted-lg">In Kanzleien und Praxen zählen Diskretion und feste Zeiten: Unsere Partner reinigen nach Feierabend, mit festem Team und Schlüsselprotokoll. Zuhause gilt bei der Endreinigung: Mit Abnahmegarantie kommt die Firma nochmals, falls die Verwaltung etwas beanstandet.</p>
+      <div class="checklist" id="checklist">
+        <div class="cl-head"><b>Checkliste vor der Anfrage</b><span class="pill blue tnum" id="clCount">0 von 8 erledigt</span></div>
+        <div class="cl-group"><span class="when">Für alle</span><label><input type="checkbox" id="cl1"> Fläche und Anzahl Räume notieren</label><label><input type="checkbox" id="cl2"> Fotos von Böden, Sanitär und Fenstern machen</label></div><div class="cl-group"><span class="when">Büro, Kanzlei, Praxis</span><label><input type="checkbox" id="cl3"> Reinigungszeiten festlegen (z. B. nach 18 Uhr)</label><label><input type="checkbox" id="cl4"> Schlüsselübergabe und Alarm klären</label><label><input type="checkbox" id="cl5"> Vertrauliche Bereiche definieren</label></div><div class="cl-group"><span class="when">Endreinigung</span><label><input type="checkbox" id="cl6"> Abgabetermin mit der Verwaltung fixieren</label><label><input type="checkbox" id="cl7"> Abnahmegarantie vereinbaren</label></div><div class="cl-group"><span class="when">Danach</span><label><input type="checkbox" id="cl8"> Abnahmeprotokoll prüfen und unterschreiben</label></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="k-reviews" style="background:#fff;border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Beispiele</span><h2>Typische Reinigungsaufträge und was sie kosten</h2><p>Typische Anfragen mit unverbindlichen Richtpreisen.</p></div>
+    <div class="examples"><div class="example"><i class="ic" data-i="building"></i><p>Anwaltskanzlei in Zug, 180 m², Reinigung 2× pro Woche nach Feierabend</p><div class="pr"><span>Richtpreis pro Monat</span><b class="tnum">CHF 1'180–1'600</b></div></div><div class="example"><i class="ic" data-i="sparkle"></i><p>Endreinigung 3.5-Zimmer-Wohnung in Zürich mit Abnahmegarantie</p><div class="pr"><span>Richtpreis</span><b class="tnum">CHF 830–1'120</b></div></div><div class="example"><i class="ic" data-i="medical"></i><p>Arztpraxis in Bern, 220 m², tägliche Reinigung</p><div class="pr"><span>Richtpreis pro Monat</span><b class="tnum">CHF 3'390–4'590</b></div></div></div>
+  </div>
+</section>
+
+<section class="sec" id="k-prices" style="padding-top:0">
+  <div class="wrap price-guide">
+    <div>
+      <h2 class="h2">Was kostet eine Endreinigung?</h2>
+      <p class="muted-lg">Richtwerte für die Endreinigung einer Wohnung inklusive Küche, Bad und Fenster. Büroreinigung wird meist pro Monat offeriert.</p>
+      <a class="btn btn-primary" href="#anfrage" style="margin-top:22px">Genauen Preis erfahren <i class="ic" data-i="arrow"></i></a>
+    </div>
+    <div>
+      <div class="tbl-wrap"><table class="pt"><thead><tr><th>Wohnung</th><th>Endreinigung</th><th>Mit Abnahmegarantie</th></tr></thead><tbody><tr><td><b>1–1.5 Zimmer</b></td><td class="tnum">380–520</td><td class="tnum">440–600</td></tr><tr><td><b>2–2.5 Zimmer</b></td><td class="tnum">550–750</td><td class="tnum">640–860</td></tr><tr><td><b>3–3.5 Zimmer</b></td><td class="tnum">720–980</td><td class="tnum">830–1'120</td></tr><tr><td><b>4–4.5 Zimmer</b></td><td class="tnum">940–1'260</td><td class="tnum">1'080–1'450</td></tr><tr><td><b>5+ Zimmer / Haus</b></td><td class="tnum">1'280–1'720</td><td class="tnum">1'470–1'980</td></tr></tbody></table></div>
+      <p class="small">Unverbindliche Richtwerte in CHF inkl. MwSt.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="k-app" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Die App zu reinigungscout.ch</h2><p>Für Kundinnen und Kunden und für unsere Partnerfirmen. Kostenlos für iPhone und Android.</p></div>
+
+  <div class="apps">
+    <div class="app-card">
+      <div class="app-txt">
+        <span class="app-tag"><i class="ic" data-i="user"></i>Für Privat- und Firmenkunden</span>
+        <h3>reinigungscout.ch App</h3>
+        <p>Reinigung anfragen, Räume fotografieren, Offerten vergleichen und Einsätze im Abo verwalten. Für Firmen und Privatkunden.</p>
+        <div class="stores">
+          <a class="store" href="https://reinigungscout.ch/app" target="_blank" rel="noopener"><i class="ic" data-i="apple"></i><span><small>Laden im</small>App Store</span></a>
+          <a class="store" href="https://reinigungscout.ch/app" target="_blank" rel="noopener"><i class="ic" data-i="play"></i><span><small>Jetzt bei</small>Google Play</span></a>
+        </div>
+        <div class="qr-row"><span class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124" class="segno"><path transform="scale(4)" class="qrline" stroke="#1d1a14" d="M1 1.5h7m2 0h1m3 0h2m1 0h2m4 0h7m-29 1h1m5 0h1m2 0h2m1 0h3m1 0h1m1 0h2m2 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h2m1 0h2m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h2m2 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h1m2 0h3m4 0h2m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h4m1 0h1m1 0h2m2 0h1m-20 1h1m2 0h1m1 0h1m1 0h2m5 0h1m1 0h1m1 0h3m1 0h2m1 0h1m-27 1h1m1 0h2m5 0h1m2 0h3m2 0h1m4 0h1m1 0h5m-27 1h1m2 0h2m4 0h2m1 0h1m3 0h1m1 0h2m1 0h1m1 0h2m1 0h1m-26 1h1m1 0h1m1 0h1m1 0h2m1 0h2m3 0h1m1 0h3m3 0h1m1 0h2m-28 1h3m1 0h2m2 0h1m1 0h2m3 0h2m2 0h1m2 0h1m1 0h1m2 0h1m-29 1h2m1 0h2m4 0h2m1 0h3m1 0h1m1 0h1m3 0h1m1 0h1m1 0h3m-27 1h1m1 0h1m1 0h3m1 0h2m3 0h3m6 0h1m3 0h1m-28 1h1m2 0h1m3 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m-25 1h4m1 0h1m3 0h5m1 0h1m1 0h4m1 0h1m3 0h1m-28 1h2m3 0h1m2 0h1m3 0h1m4 0h2m1 0h1m1 0h5m1 0h1m-27 1h8m2 0h2m1 0h1m1 0h1m7 0h2m1 0h1m-26 1h2m7 0h1m1 0h5m6 0h1m2 0h1m-29 1h7m1 0h1m2 0h1m2 0h1m2 0h1m2 0h6m1 0h2m-21 1h1m2 0h1m3 0h2m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m-29 1h7m2 0h1m1 0h2m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m3 0h1m-29 1h1m5 0h1m2 0h1m2 0h2m1 0h1m1 0h1m1 0h2m3 0h2m1 0h1m-28 1h1m1 0h3m1 0h1m1 0h1m2 0h4m3 0h7m2 0h2m-29 1h1m1 0h3m1 0h1m5 0h1m1 0h1m1 0h1m1 0h1m4 0h1m3 0h1m-28 1h1m1 0h3m1 0h1m4 0h4m1 0h1m1 0h4m3 0h4m-29 1h1m5 0h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h4m1 0h1m1 0h2m-29 1h7m3 0h1m2 0h5m2 0h3m1 0h1m2 0h1"/></svg>
+</span><small>Mit der Handykamera scannen und App laden</small></div>
+      </div>
+      <div class="mockphone" aria-hidden="true"><div class="scr"><span class="logo"><b>reinigung<span>scout</span>.ch</b></span><p>Was dürfen wir für Sie reinigen?</p><div class="tiles"><span><i class="ic" data-i="sparkle"></i>Endreinigung</span><span><i class="ic" data-i="building"></i>Büro</span><span><i class="ic" data-i="calendar"></i>Abo</span><span><i class="ic" data-i="window"></i>Fenster</span></div><div class="mbtn">+ Neue Anfrage</div></div></div>
+    </div>
+    <div class="app-card dark">
+      <div class="app-txt">
+        <span class="app-tag"><i class="ic" data-i="truck"></i>Für Partnerfirmen</span>
+        <h3>auftragscout.ch Partner-App</h3>
+        <p>Ein Login für alle Scout-Portale: Leads per Push, Kunden direkt anrufen, Offerten unterwegs erstellen und Aufträge im Kalender sehen.</p>
+        <div class="stores">
+          <a class="store" href="https://auftragscout.ch/partner-app" target="_blank" rel="noopener"><i class="ic" data-i="apple"></i><span><small>Laden im</small>App Store</span></a>
+          <a class="store" href="https://auftragscout.ch/partner-app" target="_blank" rel="noopener"><i class="ic" data-i="play"></i><span><small>Jetzt bei</small>Google Play</span></a>
+        </div>
+        <div class="qr-row"><span class="qr light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124" class="segno"><path transform="scale(4)" class="qrline" stroke="#1d1a14" d="M1 1.5h7m3 0h5m1 0h4m2 0h7m-29 1h1m5 0h1m1 0h2m4 0h2m1 0h1m1 0h2m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m1 0h3m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m1 0h4m3 0h1m2 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h4m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-19 1h1m1 0h4m1 0h2m1 0h1m-21 1h1m1 0h1m1 0h1m1 0h1m4 0h1m2 0h1m2 0h1m1 0h2m3 0h1m2 0h1m-28 1h1m7 0h3m3 0h1m1 0h3m3 0h1m2 0h1m2 0h1m-28 1h3m2 0h3m3 0h2m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h3m-25 1h1m2 0h1m2 0h2m3 0h1m1 0h1m1 0h4m4 0h1m-28 1h2m1 0h1m1 0h5m1 0h1m5 0h1m3 0h3m1 0h1m1 0h2m-28 1h5m1 0h2m4 0h1m2 0h2m2 0h3m2 0h1m2 0h1m-29 1h3m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m3 0h1m2 0h1m1 0h2m-27 1h1m1 0h2m1 0h1m1 0h3m1 0h3m1 0h4m4 0h1m1 0h1m-27 1h1m1 0h4m3 0h3m1 0h1m1 0h2m3 0h2m2 0h1m1 0h2m-27 1h1m1 0h2m1 0h1m1 0h4m1 0h1m1 0h3m1 0h3m2 0h2m1 0h1m-29 1h1m3 0h5m2 0h1m1 0h1m3 0h2m2 0h4m2 0h2m-28 1h1m1 0h2m2 0h1m1 0h3m3 0h3m2 0h1m1 0h1m2 0h1m1 0h1m-28 1h1m1 0h1m1 0h1m1 0h1m1 0h3m4 0h3m1 0h6m-17 1h1m2 0h3m3 0h4m3 0h1m1 0h3m-29 1h7m2 0h1m4 0h1m1 0h1m2 0h2m1 0h1m1 0h2m1 0h2m-29 1h1m5 0h1m4 0h4m2 0h1m2 0h1m3 0h2m2 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h1m2 0h1m2 0h5m3 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m1 0h4m1 0h1m3 0h1m3 0h1m1 0h3m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h3m2 0h1m2 0h2m1 0h3m2 0h1m-29 1h1m5 0h1m2 0h1m2 0h6m1 0h3m5 0h1m-28 1h7m1 0h1m2 0h3m2 0h2m1 0h3m2 0h1m2 0h2"/></svg>
+</span><small>Partner-App laden</small></div>
+      </div>
+      <div class="app-shot b" aria-hidden="true"><div class="p-card"><div class="hd"><b>Neue Leads</b><span class="pill blue">Push</span></div><div class="lead-row"><b>Kanzlei Zug</b><span class="pill blue">Neu</span><small>180 m² · 2× pro Woche · Abo</small></div><div class="lead-row"><b>Endreinigung Zürich</b><span class="pill blue">Neu</span><small>3.5 Zi · Abnahmegarantie · 30.11.</small></div></div></div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<section class="sec" id="k-cities" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2" style="font-size:24px;margin-bottom:16px">Reinigungsfirmen in Ihrer Nähe</h2>
+    <div class="cities"><a href="#anfrage">Reinigung Zürich</a><a href="#anfrage">Reinigung Winterthur</a><a href="#anfrage">Reinigung Bern</a><a href="#anfrage">Reinigung Basel</a><a href="#anfrage">Reinigung Luzern</a><a href="#anfrage">Reinigung Zug</a><a href="#anfrage">Reinigung St. Gallen</a><a href="#anfrage">Reinigung Aarau</a><a href="#anfrage">Reinigung Baden</a><a href="#anfrage">Reinigung Thun</a><a href="#anfrage">Reinigung Chur</a><a href="#anfrage">Reinigung Schaffhausen</a><a href="#anfrage">Reinigung Olten</a><a href="#anfrage">Reinigung Lausanne</a><a href="#anfrage">Reinigung Genf</a><a href="#anfrage">Reinigung Lugano</a></div>
+  </div>
+</section>
+
+
+<section class="sec" id="k-faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">FAQ</span><h2>Häufige Fragen</h2></div>
+    <div class="faq"><details open><summary>Ist reinigungscout.ch für mich kostenlos?</summary><p>Ja. Für Firmen und Privatkunden ist die Anfrage kostenlos und unverbindlich.</p></details><details><summary>Was bedeutet Abnahmegarantie?</summary><p>Beanstandet die Verwaltung bei der Wohnungsabgabe etwas, reinigt die Firma kostenlos nach. So haben Sie Sicherheit am Abgabetermin.</p></details><details><summary>Reinigen die Firmen auch ausserhalb der Bürozeiten?</summary><p>Ja. Für Kanzleien, Praxen und Büros reinigen viele Partner am Abend, früh morgens oder am Wochenende.</p></details><details><summary>Wie wird die Vertraulichkeit in Kanzleien sichergestellt?</summary><p>Partner für B2B-Aufträge arbeiten mit festen Teams und Schlüsselprotokoll. Auf Wunsch unterschreiben sie eine Vertraulichkeitserklärung.</p></details><details><summary>Kann ich ein Reinigungs-Abo kündigen?</summary><p>Die Konditionen vereinbaren Sie direkt mit der Firma. Viele bieten monatlich kündbare Abos an.</p></details><details><summary>Muss ich ein Angebot annehmen?</summary><p>Nein. Alle Offerten sind unverbindlich.</p></details></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta-band">
+    <div><h2>Bereit für saubere Räume?</h2><p>In 3 Minuten ausgefüllt. Offerten meist schon heute.</p></div>
+    <a class="btn btn-white btn-lg" href="#anfrage">Kostenlos Offerten erhalten <i class="ic" data-i="arrow"></i></a>
+  </div>
+  <div class="contact">
+    <div><i class="ic" data-i="phone"></i><p><b>Telefon</b><span>+41 79 740 18 18</span><br><small style="color:var(--muted)">Mo–Fr 09:00–16:00</small></p></div>
+    <div><i class="ic" data-i="mail"></i><p><b>E-Mail</b><span>anfrage@reinigungscout.ch</span><br><small style="color:var(--muted)">Antwort innert 24 h</small></p></div>
+    <div><i class="ic" data-i="pin"></i><p><b>Adresse</b><span>Churerstrasse 160B, 8808 Pfäffikon</span></p></div>
+  </div>
+</section>
+</main>
+
+<!-- ================================================================ -->
+<!-- ======================== PARTNER VIEW ========================== -->
+<!-- ================================================================ -->
+<main id="view-partner" class="view">
+
+<section class="p-hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Für Reinigungsfirmen und Hauswartungen</span>
+      <h1>Mehr feste Kunden.<br><em>Planbarer Umsatz.</em></h1>
+      <p class="lead">Erhalten Sie Anfragen von Kanzleien, Praxen, Büros und Privatkunden aus Ihrer Region, mit Fläche, Häufigkeit und Fotos. Offerte in 2 Minuten erstellen.</p>
+      <div class="ctas">
+        <a class="btn btn-primary btn-lg" href="#p-register">Kostenlos Partner werden <i class="ic" data-i="arrow"></i></a>
+        <a class="btn btn-ghost btn-lg" href="#p-dash">Dashboard ansehen</a>
+      </div>
+      <div class="p-kpis"><div><b class="tnum">B2B + B2C</b><small>Anfragen</small></div><div><b class="tnum">max. 5</b><small>Firmen pro Anfrage</small></div><div><b class="tnum">0 CHF</b><small>Grundgebühr im Start-Paket</small></div></div>
+    </div>
+    <div class="p-card">
+      <div class="hd"><b>Neue Leads in Ihrer Region</b><span class="pill blue">Live</span></div>
+      <div class="lead-row"><b>Kanzlei Zug</b><span class="pill blue">Neu</span><small>180 m² · 2× pro Woche · Abo</small></div><div class="lead-row"><b>Endreinigung Zürich</b><span class="pill blue">Neu</span><small>3.5 Zi · Abnahmegarantie · 30.11.</small></div><div class="lead-row"><b>Arztpraxis Bern</b><span class="pill green">Offerte gesendet</span><small>220 m² · täglich ab 18 Uhr</small></div>
+      <div class="foot"><i class="ic" data-i="bolt"></i>Ein Portal für alle Scout-Seiten: Ihre Aufträge laufen zentral über auftragscout.ch.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-block:44px">
+  <div class="wrap">
+    <p style="text-align:center;color:var(--muted);font-weight:600;margin-bottom:16px">Anfragen für diese Leistungen</p>
+    <div class="branches"><span><i class="ic" data-i="building"></i>Büroreinigung</span><span><i class="ic" data-i="medical"></i>Praxisreinigung</span><span><i class="ic" data-i="sparkle"></i>Endreinigung</span><span><i class="ic" data-i="calendar"></i>Unterhaltsreinigung</span><span><i class="ic" data-i="window"></i>Fensterreinigung</span><span><i class="ic" data-i="stairs"></i>Treppenhaus</span><span><i class="ic" data-i="trowel"></i>Baureinigung</span></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-block:20px 64px">
+  <div class="wrap life">
+    <div class="paper" aria-label="Beispiel-Offerte">
+      <div class="paper-h"><b>Offerte Nr. 2026-204</b><small>Glanzwerk Reinigung AG · Zug</small></div>
+      <div class="paper-r"><span>Büroreinigung 180 m²</span><small>2× pro Woche</small><b>960.–</b></div><div class="paper-r"><span>Sanitär und Kaffeeküche</span><small>2× pro Woche</small><b>220.–</b></div><div class="paper-r"><span>Fenster innen</span><small>monatlich</small><b>110.–</b></div><div class="paper-r"><span>Reinigungsmittel und Material</span><small>inklusive</small><b>inkl.</b></div>
+      <div class="paper-t"><span>Total exkl. MwSt.</span><span>CHF 1'290.00</span></div>
+      <div class="paper-t"><span>MwSt. 8.1 %</span><span>CHF 104.50</span></div>
+      <div class="paper-t big"><span>Total</span><span>CHF 1'394.50</span></div>
+      <p class="hand">pro Monat, kündbar</p>
+    </div>
+    <div>
+      <h2 class="h2">Wiederkehrende Aufträge statt Einzelfahrten.</h2>
+      <p class="muted-lg">Ein Abo mit einer Kanzlei bringt jeden Monat planbaren Umsatz. Sie sehen Fläche, Häufigkeit und Zeiten auf einen Blick und offerieren mit Ihren eigenen Ansätzen.</p>
+      <div class="life-facts"><div><b class="tnum">2 Min.</b><small>pro Offerte mit Vorlagen</small></div><div><b class="tnum">max. 5</b><small>Firmen pro Anfrage</small></div><div><b class="tnum">48 h</b><small>bis zur Freischaltung</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="p-how" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Ablauf für Partner</span><h2>Ihr Fokus: anrufen. Wir erledigen den Rest.</h2><p>Von der Anfrage bis zum bestätigten Auftrag läuft alles über ein System.</p></div>
+    <div class="p-steps">
+      <div class="p-step"><span class="n">1</span><h3>Registrieren</h3><p>Firma, Leistungen und Einsatzgebiet angeben. Wir prüfen Handelsregister und Versicherung innert 48 h.</p></div>
+      <div class="p-step hl"><span class="n">2</span><h3>Lead erhalten</h3><p>Vorgefilterte Anfragen mit Fläche, Häufigkeit, Zeiten und Fotos, von Firmen und Privatkunden.</p></div>
+      <div class="p-step"><span class="n">3</span><h3>Kunde kontaktieren</h3><p>Lead freischalten, Kunden anrufen und Besichtigung vereinbaren oder direkt offerieren.</p></div>
+      <div class="p-step"><span class="n">4</span><h3>Auftrag sichern</h3><p>Kunde nimmt online an. Sie erhalten die Bestätigung, Termin und Rechnung direkt im System.</p></div>
+    </div>
+    <div class="p-note"><i class="ic" data-i="shield"></i>Jede Anfrage geht an höchstens 5 Firmen. Keine Massen-Leads, keine Wettbewerbe mit 20 Anbietern.</div>
+  </div>
+</section>
+
+<section class="sec" id="p-dash" style="background:#fff;border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="demo-tag">Interaktive Vorschau</span><h2>Ihr Partner-Dashboard</h2><p>Alle Anfragen aus den Scout-Portalen landen zentral bei auftragscout.ch. Klicken Sie auf «Ansehen», um einen Lead zu öffnen, die Kontaktdaten freizuschalten und eine Offerte zu senden.</p></div>
+
+    <div class="dash">
+      <aside>
+        <span class="logo"><b>auftrag<span>scout</span>.ch</b><small>PARTNER-PORTAL</small></span>
+        <button class="dnav on" data-tab="overview"><i class="ic" data-i="grid"></i>Übersicht</button>
+        <button class="dnav" data-tab="leads"><i class="ic" data-i="target"></i>Leads <span class="ct" id="ctLeads">0</span></button>
+        <button class="dnav" data-tab="offers"><i class="ic" data-i="file"></i>Angebote</button>
+        <button class="dnav" data-tab="jobs"><i class="ic" data-i="truck"></i>Aufträge</button>
+        <button class="dnav" data-tab="calendar"><i class="ic" data-i="calendar"></i>Kalender</button>
+        <div class="credit"><small>Lead-Guthaben</small><b class="tnum" id="credits">8</b>von 10 im Paket Pro</div>
+      </aside>
+      <div class="dmain" id="dmain">
+        <div class="hi"><div><h3>Guten Morgen, Glanzwerk Reinigung AG</h3><p>Hier ist Ihre aktuelle Übersicht.</p></div><span class="pill gray tnum">Mo, 28.09.2026</span></div>
+        <div class="kpis">
+          <div class="kpi"><small>Neue Leads</small><b class="tnum" id="kNew">0</b><em>↑ 33 % seit gestern</em></div>
+          <div class="kpi"><small>Offene Angebote</small><b class="tnum" id="kOff">0</b><em>↑ 14 % zur Vorwoche</em></div>
+          <div class="kpi"><small>Aktive Aufträge</small><b class="tnum">5</b><em>2 diese Woche</em></div>
+          <div class="kpi"><small>Umsatz (Monat)</small><b class="tnum">CHF 24'310</b><em>↑ 18 % zum Vormonat</em></div>
+        </div>
+        <div id="tabBody"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Ihre Vorteile</span><h2>Gebaut für Firmen, die lieber reinigen als Büroarbeit machen</h2></div>
+    <div class="benefits">
+      <div><i class="ic" data-i="users"></i><h3>Qualifizierte Anfragen</h3><p>Echte Anfragen mit Fläche, Häufigkeit, Zeiten und Fotos. Keine Fake-Leads.</p></div>
+      <div><i class="ic" data-i="pin"></i><h3>Nur Ihr Gebiet</h3><p>Sie bestimmen Kantone, Umkreis und Leistungen. Unpassende Anfragen sehen Sie nicht.</p></div>
+      <div><i class="ic" data-i="file"></i><h3>Offerten-Vorlagen</h3><p>Positionen speichern, Preis anpassen, senden. Mit MwSt. und PDF automatisch.</p></div>
+      <div><i class="ic" data-i="calendar"></i><h3>Kalender und Aufträge</h3><p>Angenommene Offerten landen direkt als Auftrag in Ihrem Kalender.</p></div>
+      <div><i class="ic" data-i="star"></i><h3>Bewertungen sammeln</h3><p>Nach jedem Auftrag fragen wir automatisch nach einer Bewertung für Ihr Profil.</p></div>
+      <div><i class="ic" data-i="phone"></i><h3>B2B-App inklusive</h3><p>Leads und Offerten auch unterwegs, mit Push bei neuen Anfragen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="p-prices" style="background:#fff;border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Preise</span><h2>Zahlen Sie nur für Anfragen, die Sie wollen</h2><p>Keine Einrichtungsgebühr. Monatlich kündbar.</p></div>
+    <div class="prices">
+      <div class="price-card">
+        <h3>Start</h3>
+        <div class="amt tnum">CHF 0 <small>/ Monat</small></div>
+        <p style="color:var(--muted)">Ideal zum Testen. Leads einzeln freischalten.</p>
+        <ul class="clean">
+          <li><i class="ic" data-i="check"></i>Lead ab CHF 29 pro Freischaltung</li>
+          <li><i class="ic" data-i="check"></i>Partner-Dashboard und App</li>
+          <li><i class="ic" data-i="check"></i>Offerten-Vorlagen</li>
+        </ul>
+        <a class="btn btn-ghost pick" data-pk="Start" href="#p-register">Start wählen</a>
+      </div>
+      <div class="price-card hl">
+        <span class="badge">BELIEBT</span>
+        <h3>Pro</h3>
+        <div class="amt tnum">CHF 149 <small>/ Monat</small></div>
+        <p style="color:var(--muted)">Für Firmen mit regelmässiger Auslastung.</p>
+        <ul class="clean">
+          <li><i class="ic" data-i="check"></i>10 Leads inklusive, danach CHF 19</li>
+          <li><i class="ic" data-i="check"></i>Kalender, Aufträge, Rechnungen</li>
+          <li><i class="ic" data-i="check"></i>Profil mit Bewertungen</li>
+          <li><i class="ic" data-i="check"></i>Push-Benachrichtigung in Echtzeit</li>
+        </ul>
+        <a class="btn btn-primary pick" data-pk="Pro" href="#p-register">Pro wählen</a>
+      </div>
+      <div class="price-card">
+        <h3>Premium</h3>
+        <div class="amt tnum">CHF 349 <small>/ Monat</small></div>
+        <p style="color:var(--muted)">Für Firmen mit mehreren Teams.</p>
+        <ul class="clean">
+          <li><i class="ic" data-i="check"></i>30 Leads inklusive, danach CHF 15</li>
+          <li><i class="ic" data-i="check"></i>«Empfohlen»-Platzierung beim Kunden</li>
+          <li><i class="ic" data-i="check"></i>Mehrere Benutzer und Standorte</li>
+          <li><i class="ic" data-i="check"></i>Persönlicher Ansprechpartner</li>
+        </ul>
+        <a class="btn btn-ghost pick" data-pk="Premium" href="#p-register">Premium wählen</a>
+      </div>
+    </div>
+    <p class="price-note">Beispielpreise für die Vorschau. Das finale Preismodell wird noch festgelegt.</p>
+  </div>
+</section>
+
+<section class="sec" id="p-register">
+  <div class="wrap reg">
+    <div class="reg-side">
+      <span class="eyebrow">Partner werden</span>
+      <h2>In 3 Minuten registriert. Erste Leads nach Freigabe.</h2>
+      <p>Wir prüfen Ihre Angaben innert 48 Stunden. Danach sehen Sie sofort passende Anfragen aus Ihrem Gebiet.</p>
+      <div class="quote">
+        <p class="hand">Starke Partner. Saubere Arbeit.</p>
+        <p style="color:var(--muted);font-size:14px">Fragen zur Partnerschaft? Rufen Sie uns an: <b style="color:var(--navy);user-select:all">+41 79 740 18 18</b></p>
+      </div>
+    </div>
+
+    <form class="wizard" id="rz" novalidate>
+      <div class="wz-head">
+        <h3 id="rzTitle">Firmenangaben</h3>
+        <p id="rzSub">Schritt 1 von 3</p>
+        <div class="steps" id="rzSteps">
+          <div class="st cur"><div class="bar"></div><span>Firma</span></div>
+          <div class="st"><div class="bar"></div><span>Leistungen und Gebiet</span></div>
+          <div class="st"><div class="bar"></div><span>Kontakt und Paket</span></div>
+        </div>
+      </div>
+      <div class="wz-body">
+        <div class="pane on" data-step="1">
+          <div class="fields">
+            <div class="fld full"><label for="r-firm">Firmenname <i>*</i></label><input class="inp" id="r-firm" placeholder="Muster Reinigung GmbH"><span class="errmsg" id="err-rfirm">Bitte Firmennamen angeben.</span></div>
+            <div class="fld"><label for="r-uid">UID-Nummer</label><input class="inp" id="r-uid" placeholder="CHE-123.456.789"></div>
+            <div class="fld"><label for="r-year">Gegründet</label><input class="inp" id="r-year" inputmode="numeric" placeholder="2015"></div>
+            <div class="fld full"><label for="r-str">Strasse und Nr.</label><input class="inp" id="r-str"></div>
+            <div class="fld"><label for="r-plz">PLZ und Ort <i>*</i></label><input class="inp" id="r-plz" placeholder="8808 Pfäffikon"><span class="errmsg" id="err-rplz">Bitte PLZ und Ort angeben.</span></div>
+            <div class="fld"><label for="r-emp">Mitarbeitende</label><select class="inp" id="r-emp"><option>1–5</option><option selected>6–15</option><option>16–50</option><option>50+</option></select></div>
+            <div class="fld full"><label for="r-trucks">Reinigung ausserhalb der Bürozeiten?</label><select class="inp" id="r-trucks"><option>Ja, abends</option><option>Ja, abends und am Wochenende</option><option>Nein</option></select></div>
+          </div>
+        </div>
+        <div class="pane" data-step="2">
+          <p class="q">Welche Leistungen bieten Sie an? <span style="color:var(--blue)">*</span></p>
+          <div class="chips" id="r-svcs"></div>
+          <p class="errmsg" id="err-rsvcs" style="margin-top:8px">Bitte mindestens eine Leistung wählen.</p>
+          <p class="q" style="margin-top:22px">In welchen Kantonen sind Sie tätig? <span style="color:var(--blue)">*</span></p>
+          <div class="chips" id="r-kant"></div>
+          <p class="errmsg" id="err-rkant" style="margin-top:8px">Bitte mindestens einen Kanton wählen.</p>
+          <p class="q" style="margin-top:22px">Maximaler Umkreis ab Firmensitz</p>
+          <div class="range-row"><input type="range" id="r-km" min="10" max="200" step="10" value="50"><output id="r-kmv" class="tnum">50 km</output></div>
+        </div>
+        <div class="pane" data-step="3">
+          <div class="fields">
+            <div class="fld"><label for="r-fn">Vorname <i>*</i></label><input class="inp" id="r-fn"><span class="errmsg" id="err-rfn">Bitte Vorname angeben.</span></div>
+            <div class="fld"><label for="r-ln">Nachname <i>*</i></label><input class="inp" id="r-ln"><span class="errmsg" id="err-rln">Bitte Nachname angeben.</span></div>
+            <div class="fld"><label for="r-em">Geschäftliche E-Mail <i>*</i></label><input class="inp" id="r-em" type="email"><span class="errmsg" id="err-rem">Bitte gültige E-Mail angeben.</span></div>
+            <div class="fld"><label for="r-ph">Telefon <i>*</i></label><input class="inp" id="r-ph" type="tel"><span class="errmsg" id="err-rph">Bitte Telefonnummer angeben.</span></div>
+            <div class="fld full"><span class="lbl">Paket</span>
+              <div class="pk" id="r-pk">
+                <label><input type="radio" name="pk" value="Start"><span>Start</span><small class="tnum">CHF 0 / Mt. · ab CHF 29 pro Lead</small></label>
+                <label><input type="radio" name="pk" value="Pro" checked><span>Pro</span><small class="tnum">CHF 149 / Mt. · 10 Leads inkl.</small></label>
+                <label><input type="radio" name="pk" value="Premium"><span>Premium</span><small class="tnum">CHF 349 / Mt. · 30 Leads inkl.</small></label>
+              </div>
+            </div>
+            <label class="check full"><input type="checkbox" id="r-ok"> Ich bestätige, dass meine Firma im Handelsregister eingetragen ist und über eine Betriebshaftpflicht verfügt. Ich akzeptiere die Partner-AGB.</label>
+            <span class="errmsg full" id="err-rok">Bitte bestätigen.</span>
+          </div>
+        </div>
+        <div class="pane" data-step="4">
+          <div class="success">
+            <div class="big"><i class="ic" data-i="check"></i></div>
+            <h3>Willkommen, <span id="rOkFirm">Partner</span>!</h3>
+            <p style="color:var(--muted)">Ihre Registrierung ist eingegangen. Paket: <b id="rOkPk"></b></p>
+            <div class="timeline">
+              <div><span class="n">1</span><p><b>Innert 48 Stunden</b>Wir prüfen Handelsregister und Versicherung und schalten Ihr Konto frei.</p></div>
+              <div><span class="n">2</span><p><b>Profil vervollständigen</b>Logo, Referenzfotos und Offerten-Vorlagen hinterlegen.</p></div>
+              <div><span class="n">3</span><p><b>Erste Leads</b>Passende Anfragen aus <span id="rOkKant"></span> erscheinen im Dashboard und in der App.</p></div>
+            </div>
+            <a class="btn btn-primary" href="#p-dash" style="margin-top:6px">Dashboard-Vorschau öffnen <i class="ic" data-i="arrow"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="wz-foot">
+        <button type="button" class="btn btn-ghost" id="rzBack" hidden>Zurück</button>
+        <span class="hint"><i class="ic" data-i="shield"></i>Kostenlos registrieren · monatlich kündbar</span>
+        <button type="button" class="btn btn-primary" id="rzNext">Weiter <i class="ic" data-i="arrow"></i></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="sec" id="p-app" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Partner-App herunterladen</h2><p>Ein Login für alle Scout-Portale. Leads und Offerten auch unterwegs.</p></div>
+
+  <div class="apps">
+    <div class="app-card">
+      <div class="app-txt">
+        <span class="app-tag"><i class="ic" data-i="user"></i>Für Privat- und Firmenkunden</span>
+        <h3>reinigungscout.ch App</h3>
+        <p>Reinigung anfragen, Räume fotografieren, Offerten vergleichen und Einsätze im Abo verwalten. Für Firmen und Privatkunden.</p>
+        <div class="stores">
+          <a class="store" href="https://reinigungscout.ch/app" target="_blank" rel="noopener"><i class="ic" data-i="apple"></i><span><small>Laden im</small>App Store</span></a>
+          <a class="store" href="https://reinigungscout.ch/app" target="_blank" rel="noopener"><i class="ic" data-i="play"></i><span><small>Jetzt bei</small>Google Play</span></a>
+        </div>
+        <div class="qr-row"><span class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124" class="segno"><path transform="scale(4)" class="qrline" stroke="#1d1a14" d="M1 1.5h7m2 0h1m3 0h2m1 0h2m4 0h7m-29 1h1m5 0h1m2 0h2m1 0h3m1 0h1m1 0h2m2 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h2m1 0h2m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h2m2 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h1m2 0h3m4 0h2m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h4m1 0h1m1 0h2m2 0h1m-20 1h1m2 0h1m1 0h1m1 0h2m5 0h1m1 0h1m1 0h3m1 0h2m1 0h1m-27 1h1m1 0h2m5 0h1m2 0h3m2 0h1m4 0h1m1 0h5m-27 1h1m2 0h2m4 0h2m1 0h1m3 0h1m1 0h2m1 0h1m1 0h2m1 0h1m-26 1h1m1 0h1m1 0h1m1 0h2m1 0h2m3 0h1m1 0h3m3 0h1m1 0h2m-28 1h3m1 0h2m2 0h1m1 0h2m3 0h2m2 0h1m2 0h1m1 0h1m2 0h1m-29 1h2m1 0h2m4 0h2m1 0h3m1 0h1m1 0h1m3 0h1m1 0h1m1 0h3m-27 1h1m1 0h1m1 0h3m1 0h2m3 0h3m6 0h1m3 0h1m-28 1h1m2 0h1m3 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m-25 1h4m1 0h1m3 0h5m1 0h1m1 0h4m1 0h1m3 0h1m-28 1h2m3 0h1m2 0h1m3 0h1m4 0h2m1 0h1m1 0h5m1 0h1m-27 1h8m2 0h2m1 0h1m1 0h1m7 0h2m1 0h1m-26 1h2m7 0h1m1 0h5m6 0h1m2 0h1m-29 1h7m1 0h1m2 0h1m2 0h1m2 0h1m2 0h6m1 0h2m-21 1h1m2 0h1m3 0h2m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m-29 1h7m2 0h1m1 0h2m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m3 0h1m-29 1h1m5 0h1m2 0h1m2 0h2m1 0h1m1 0h1m1 0h2m3 0h2m1 0h1m-28 1h1m1 0h3m1 0h1m1 0h1m2 0h4m3 0h7m2 0h2m-29 1h1m1 0h3m1 0h1m5 0h1m1 0h1m1 0h1m1 0h1m4 0h1m3 0h1m-28 1h1m1 0h3m1 0h1m4 0h4m1 0h1m1 0h4m3 0h4m-29 1h1m5 0h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h4m1 0h1m1 0h2m-29 1h7m3 0h1m2 0h5m2 0h3m1 0h1m2 0h1"/></svg>
+</span><small>Mit der Handykamera scannen und App laden</small></div>
+      </div>
+      <div class="mockphone" aria-hidden="true"><div class="scr"><span class="logo"><b>reinigung<span>scout</span>.ch</b></span><p>Was dürfen wir für Sie reinigen?</p><div class="tiles"><span><i class="ic" data-i="sparkle"></i>Endreinigung</span><span><i class="ic" data-i="building"></i>Büro</span><span><i class="ic" data-i="calendar"></i>Abo</span><span><i class="ic" data-i="window"></i>Fenster</span></div><div class="mbtn">+ Neue Anfrage</div></div></div>
+    </div>
+    <div class="app-card dark">
+      <div class="app-txt">
+        <span class="app-tag"><i class="ic" data-i="truck"></i>Für Partnerfirmen</span>
+        <h3>auftragscout.ch Partner-App</h3>
+        <p>Ein Login für alle Scout-Portale: Leads per Push, Kunden direkt anrufen, Offerten unterwegs erstellen und Aufträge im Kalender sehen.</p>
+        <div class="stores">
+          <a class="store" href="https://auftragscout.ch/partner-app" target="_blank" rel="noopener"><i class="ic" data-i="apple"></i><span><small>Laden im</small>App Store</span></a>
+          <a class="store" href="https://auftragscout.ch/partner-app" target="_blank" rel="noopener"><i class="ic" data-i="play"></i><span><small>Jetzt bei</small>Google Play</span></a>
+        </div>
+        <div class="qr-row"><span class="qr light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124" class="segno"><path transform="scale(4)" class="qrline" stroke="#1d1a14" d="M1 1.5h7m3 0h5m1 0h4m2 0h7m-29 1h1m5 0h1m1 0h2m4 0h2m1 0h1m1 0h2m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m1 0h3m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m1 0h4m3 0h1m2 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h4m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-19 1h1m1 0h4m1 0h2m1 0h1m-21 1h1m1 0h1m1 0h1m1 0h1m4 0h1m2 0h1m2 0h1m1 0h2m3 0h1m2 0h1m-28 1h1m7 0h3m3 0h1m1 0h3m3 0h1m2 0h1m2 0h1m-28 1h3m2 0h3m3 0h2m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h3m-25 1h1m2 0h1m2 0h2m3 0h1m1 0h1m1 0h4m4 0h1m-28 1h2m1 0h1m1 0h5m1 0h1m5 0h1m3 0h3m1 0h1m1 0h2m-28 1h5m1 0h2m4 0h1m2 0h2m2 0h3m2 0h1m2 0h1m-29 1h3m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m3 0h1m2 0h1m1 0h2m-27 1h1m1 0h2m1 0h1m1 0h3m1 0h3m1 0h4m4 0h1m1 0h1m-27 1h1m1 0h4m3 0h3m1 0h1m1 0h2m3 0h2m2 0h1m1 0h2m-27 1h1m1 0h2m1 0h1m1 0h4m1 0h1m1 0h3m1 0h3m2 0h2m1 0h1m-29 1h1m3 0h5m2 0h1m1 0h1m3 0h2m2 0h4m2 0h2m-28 1h1m1 0h2m2 0h1m1 0h3m3 0h3m2 0h1m1 0h1m2 0h1m1 0h1m-28 1h1m1 0h1m1 0h1m1 0h1m1 0h3m4 0h3m1 0h6m-17 1h1m2 0h3m3 0h4m3 0h1m1 0h3m-29 1h7m2 0h1m4 0h1m1 0h1m2 0h2m1 0h1m1 0h2m1 0h2m-29 1h1m5 0h1m4 0h4m2 0h1m2 0h1m3 0h2m2 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h1m2 0h1m2 0h5m3 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m1 0h4m1 0h1m3 0h1m3 0h1m1 0h3m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h3m2 0h1m2 0h2m1 0h3m2 0h1m-29 1h1m5 0h1m2 0h1m2 0h6m1 0h3m5 0h1m-28 1h7m1 0h1m2 0h3m2 0h2m1 0h3m2 0h1m2 0h2"/></svg>
+</span><small>Partner-App laden</small></div>
+      </div>
+      <div class="app-shot b" aria-hidden="true"><div class="p-card"><div class="hd"><b>Neue Leads</b><span class="pill blue">Push</span></div><div class="lead-row"><b>Kanzlei Zug</b><span class="pill blue">Neu</span><small>180 m² · 2× pro Woche · Abo</small></div><div class="lead-row"><b>Endreinigung Zürich</b><span class="pill blue">Neu</span><small>3.5 Zi · Abnahmegarantie · 30.11.</small></div></div></div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<section class="sec" id="p-faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">FAQ für Partner</span><h2>Häufige Fragen von Firmen</h2></div>
+    <div class="faq">
+      <details open><summary>An wie viele Firmen geht eine Anfrage?</summary><p>An höchstens 5 passende Firmen aus dem Gebiet. So haben Sie eine realistische Chance auf den Auftrag.</p></details>
+      <details><summary>Was kostet ein Lead?</summary><p>Das hängt vom Paket ab. Im Start-Paket schalten Sie einzelne Leads frei, in Pro und Premium sind Leads im Monatspreis enthalten.</p></details>
+      <details><summary>Was passiert bei ungültigen Anfragen?</summary><p>Falsche Telefonnummer oder Spaß-Anfrage? Melden Sie den Lead innert 72 Stunden und Sie erhalten die Gutschrift zurück.</p></details>
+      <details><summary>Brauche ich eine spezielle Software?</summary><p>Nein. Das Dashboard läuft im Browser, dazu gibt es die Partner-App für iPhone und Android.</p></details>
+      <details><summary>Kann ich nur B2B-Aufträge erhalten?</summary><p>Ja. Sie wählen bei der Registrierung, ob Sie Aufträge von Firmen, von Privatkunden oder von beiden erhalten.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta-band">
+    <div><h2>Neue Abo-Kunden, ab nächster Woche.</h2><p>Registrierung kostenlos, Freigabe innert 48 Stunden.</p></div>
+    <a class="btn btn-primary btn-lg" href="#p-register">Jetzt Partner werden <i class="ic" data-i="arrow"></i></a>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <span class="logo"><b>reinigung<span>scout</span>.ch</b><small>REINIGUNG. SCHWEIZWEIT.</small></span>
+        <p style="margin-top:14px;font-size:14px;max-width:30em">Ihr Portal für Reinigungsofferten für Büro, Kanzlei, Praxis und Zuhause in der ganzen Schweiz.</p>
+        <div class="family"><span>umzugscout.ch</span><span>malerscout.ch</span><span>entsorgungscout.ch</span><span class="fam-main">auftragscout.ch · Partner-Portal</span></div>
+      </div>
+      <div><h4>Für Kunden</h4><button class="lnk" data-go="kunden" data-anchor="anfrage">Anfrage starten</button><button class="lnk" data-go="kunden" data-anchor="k-how">So funktioniert's</button><button class="lnk" data-go="kunden" data-anchor="k-services">Leistungen</button><button class="lnk" data-go="kunden" data-anchor="k-faq">FAQ</button><button class="lnk" data-login="kunde">Kunden-Login</button><button class="lnk" data-go="kunden" data-anchor="k-app">App</button></div>
+      <div><h4>Für Unternehmen</h4><button class="lnk" data-go="partner" data-anchor="p-register">Partner werden</button><button class="lnk" data-login="firma">B2B-Login</button><button class="lnk" data-go="partner" data-anchor="p-app">Partner-App</button><button class="lnk" data-go="partner" data-anchor="p-prices">Preise</button><button class="lnk" data-go="partner" data-anchor="p-faq">FAQ für Partner</button></div>
+      <div><h4>Kontakt</h4><span class="lnk">+41 79 740 18 18</span><span class="lnk">anfrage@reinigungscout.ch</span><span class="lnk">Churerstrasse 160B<br>8808 Pfäffikon</span></div>
+    </div>
+    <div class="legal"><span>© 2026 reinigungscout.ch</span><span>Datenschutz · AGB · <button type="button" class="lnk-imp" data-imp>Impressum</button> · DE / FR / IT / EN</span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn btn-primary" id="mbarBtn" href="#anfrage">Kostenlos Offerten erhalten</a></div>
+
+<!-- Drawer -->
+<div class="drawer-bg" id="dbg"></div>
+<aside class="drawer" id="drawer" aria-label="Lead-Details">
+  <div class="dh"><b id="dTitle">Lead</b><button class="x" id="dClose" aria-label="Schliessen"><i class="ic" data-i="x"></i></button></div>
+  <div class="db" id="dBody"></div>
+  <div class="df" id="dFoot"></div>
+</aside>
+
+
+
+<div class="modal imp" id="impModal" role="dialog" aria-modal="true" aria-labelledby="impTitle" hidden>
+  <button type="button" class="x" id="impClose" aria-label="Schliessen"><i class="ic" data-i="x"></i></button>
+  <h3 id="impTitle">Impressum</h3>
+  <h4>Betreiberin</h4>
+  <p>Dritivo AG (in Gründung)<br>Churerstrasse 160B<br>8808 Pfäffikon<br>Schweiz</p>
+  <h4>Kontakt</h4>
+  <p>E-Mail: <a href="mailto:anfrage@reinigungscout.ch">anfrage@reinigungscout.ch</a><br>Telefon: +41 79 740 18 18</p>
+  <h4>Status</h4>
+  <p>Die Dritivo AG befindet sich in Gründung. Angaben zum Handelsregistereintrag, zur UID und zu den Vertretungsberechtigten werden nach der Eintragung ergänzt.</p>
+  <h4>Haftungsausschluss</h4>
+  <p>Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität wird jedoch keine Gewähr übernommen. Für Inhalte externer Links sind ausschliesslich deren Betreiber verantwortlich.</p>
+  <h4>Urheberrecht</h4>
+  <p>Texte, Grafiken und Gestaltung dieser Website sind urheberrechtlich geschützt. Eine Verwendung, Vervielfältigung oder Weitergabe bedarf der vorherigen schriftlichen Zustimmung.</p>
+</div>
+<div class="modal-bg" id="mbg"></div>
+<div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="lgTitle" hidden>
+  <button type="button" class="x" id="lgClose" aria-label="Schliessen"><i class="ic" data-i="x"></i></button>
+  <div class="lg-tabs" role="tablist">
+    <button type="button" data-lt="kunde" class="on"><i class="ic" data-i="user"></i>Privatkunde</button>
+    <button type="button" data-lt="firma"><i class="ic" data-i="truck"></i>Firma (B2B)</button>
+  </div>
+  <div id="lgForm">
+    <h3 id="lgTitle">Willkommen zurück</h3>
+    <p id="lgSub" class="lg-sub">Melden Sie sich an, um Ihre Anfragen und Offerten zu sehen.</p>
+    <form id="lg" novalidate>
+      <div class="fld"><label for="lg-em">E-Mail</label><input class="inp" id="lg-em" type="email" autocomplete="email" placeholder="name@beispiel.ch"><span class="errmsg" id="err-lgem">Bitte gültige E-Mail angeben.</span></div>
+      <div class="fld"><label for="lg-pw">Passwort</label><input class="inp" id="lg-pw" type="password" autocomplete="current-password"><span class="errmsg" id="err-lgpw">Bitte Passwort eingeben.</span></div>
+      <div class="lg-row"><label class="check"><input type="checkbox" id="lg-keep" checked> Angemeldet bleiben</label><button type="button" class="linkbtn" id="lgForgot">Passwort vergessen?</button></div>
+      <p class="lg-info" id="lgInfo" hidden></p>
+      <button type="submit" class="btn btn-primary" style="width:100%">Anmelden</button>
+    </form>
+    <p class="lg-alt" id="lgAlt"></p>
+  </div>
+  <div id="lgDone" hidden></div>
+</div>
+
+<div class="toast" id="toast"><i class="ic" data-i="check"></i><span id="toastT"></span></div>
+
+<script>
+(function(){
+/* ---------- Icons ---------- */
+const I={
+ truck:'<path d="M2 6h12v10H2z"/><path d="M14 9h4.5L22 12.5V16h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/>',
+ house:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',
+ sparkle:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/>',
+ building:'<rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"/>',
+ piano:'<rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M8 5v8M12 5v8M16 5v8M3 13h18"/>',
+ store:'<path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v1.5a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M5 13v8h14v-8"/>',
+ trash:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/><path d="M10 11v6M14 11v6"/>',
+ box:'<path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/>',
+ van:'<path d="M2 7h13l4 4h3v6H2z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
+ shield:'<path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ percent:'<path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>',
+ check:'<path d="M5 12.5l4.5 4.5L19 7"/>',
+ phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
+ mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+ pin:'<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+ camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',
+ users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2A5 5 0 0 1 21.5 19"/>',
+ file:'<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>',
+ calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+ arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+ bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+ chat:'<path d="M4 5h16v11H9l-5 4z"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+ grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+ x:'<path d="M6 6l12 12M18 6L6 18"/>',
+ star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+ apple:'<path d="M16 3c-1.2.1-2.6.9-3.3 2-.7 1-.9 2.1-.8 3 1.3 0 2.6-.8 3.3-1.9.7-1 1-2 .8-3.1z"/><path d="M12 8.5c-1 0-2-.6-3-.6-2.3 0-4 2-4 5.2 0 3.6 2.4 7.9 4.3 7.9 1 0 1.5-.6 2.7-.6s1.6.6 2.7.6c1.4 0 2.8-2.6 3.3-4.2-1.7-.7-2.5-2-2.5-3.6 0-1.5.8-2.6 2-3.3-.8-1.1-2-1.7-3.2-1.7-1 0-1.6.6-2.3.3z"/>',
+ play:'<path d="M5 3.5v17l15-8.5z"/><path d="M5 3.5l10 10M5 20.5l10-10"/>',
+ roller:'<rect x="3" y="3" width="15" height="6" rx="1.5"/><path d="M18 6h2v5h-8v3"/><rect x="10.5" y="14" width="3" height="7" rx="1"/>',
+ key:'<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/>',
+ door:'<path d="M5 21V3h12v18"/><path d="M3 21h16"/><circle cx="14" cy="12" r="1"/>',
+ stairs:'<path d="M3 20h5v-5h5v-5h5V5h3"/>',
+ window:'<rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/>',
+ layers:'<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
+ fence:'<path d="M5 21V6l2-3 2 3v15M15 21V6l2-3 2 3v15M3 10h18M3 16h18"/>',
+ trowel:'<path d="M14 4l6 6-8 3-1-1z"/><path d="M11 12l-7 7"/>',
+ leaf:'<path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19l8-8"/>',
+ medical:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/>',
+ bucket:'<path d="M5 8h14l-1.5 12h-11z"/><path d="M5 8a7 4 0 0 1 14 0"/>',
+ user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+ plus:'<path d="M12 5v14M5 12h14"/>',
+ lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+ send:'<path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/>'
+};
+function paintIcons(root){(root||document).querySelectorAll('i.ic[data-i]').forEach(el=>{if(el.firstChild)return;el.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+(I[el.dataset.i]||'')+'</svg>';});}
+const ic=n=>'<i class="ic" data-i="'+n+'"></i>';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const chf=n=>'CHF '+Math.round(n).toLocaleString('de-CH').replace(/[’,]/g,"'");
+function toast(t){$('#toastT').textContent=t;const el=$('#toast');el.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('on'),2800);}
+
+/* ---------- Views ---------- */
+function showView(v,anchor){
+  const isP=v==='partner';
+  $('#view-kunden').classList.toggle('on',!isP);$('#view-partner').classList.toggle('on',isP);
+  $('#swK').classList.toggle('on',!isP);$('#swP').classList.toggle('on',isP);
+  $('#navK').hidden=isP;$('#navP').hidden=!isP;
+  const cta=$('#topCta');cta.textContent=isP?'Partner werden':'Offerten anfordern';cta.href=isP?'#p-register':'#anfrage';
+  const mb=$('#mbarBtn');mb.textContent=isP?'Kostenlos Partner werden':'Kostenlos Offerten erhalten';mb.href=isP?'#p-register':'#anfrage';
+  try{history.replaceState(null,'','#'+(isP?'partner':'kunden'));}catch(e){}
+  const tgt=anchor?document.getElementById(anchor):null;
+  if(tgt){setTimeout(()=>tgt.scrollIntoView({behavior:'smooth',block:'start'}),30);} else window.scrollTo(0,0);
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-go]');if(!b)return;e.preventDefault();showView(b.dataset.go,b.dataset.anchor);
+});
+// mobile bar visibility
+const mbar=$('#mbar');
+function onScroll(){const y=window.scrollY;mbar.classList.toggle('show',y>500);document.body.classList.toggle('has-mbar',y>500);}
+window.addEventListener('scroll',onScroll,{passive:true});
+
+/* ---------- Services ---------- */
+const SVC=[
+ {"k": "end", "n": "Endreinigung", "d": "Mit Abnahmegarantie", "i": "sparkle", "tag": "Beliebt", "long": "Wohnungsreinigung beim Auszug. Mit Abnahmegarantie reinigt die Firma nach, falls die Verwaltung etwas beanstandet."},
+ {"k": "buero", "n": "Büroreinigung", "d": "Kanzlei, Agentur, Büro", "i": "building", "tag": "B2B", "long": "Regelmässige Reinigung von Büros und Kanzleien, diskret ausserhalb der Bürozeiten."},
+ {"k": "praxis", "n": "Praxisreinigung", "d": "Arzt, Zahnarzt, Therapie", "i": "medical", "long": "Hygienische Reinigung von Behandlungsräumen, Wartezimmer und Sanitär, auf Wunsch mit Desinfektion."},
+ {"k": "wohnung", "n": "Wohnungsreinigung", "d": "Regelmässig zuhause", "i": "house", "long": "Wöchentliche oder zweiwöchentliche Reinigung Ihrer Wohnung durch ein festes Team."},
+ {"k": "unterhalt", "n": "Unterhaltsreinigung", "d": "Gewerbe und Verkauf", "i": "calendar", "long": "Laufende Reinigung von Gewerbeflächen, Läden und Showrooms nach festem Plan."},
+ {"k": "fenster", "n": "Fensterreinigung", "d": "Glas, Rahmen, Storen", "i": "window", "long": "Fenster, Rahmen und Storen innen und aussen, auch für grosse Glasflächen."},
+ {"k": "treppe", "n": "Treppenhaus", "d": "Für Verwaltungen", "i": "stairs", "long": "Treppenhausreinigung in Mehrfamilienhäusern im festen Rhythmus."},
+ {"k": "grund", "n": "Grundreinigung", "d": "Frühling, Einzug", "i": "bucket", "long": "Gründliche Reinigung aller Räume inklusive Schränke, Küche und Fenster."},
+ {"k": "bau", "n": "Baureinigung", "d": "Nach Umbau", "i": "trowel", "long": "Grob- und Feinreinigung nach Umbau oder Neubau, bereit für den Bezug."}
+];
+const SIZES=['1–1.5 Zi','2–2.5 Zi','3–3.5 Zi','4–4.5 Zi','5+ Zi / Haus'];
+const BASE=[650,950,1350,1800,2500];
+const S={svc:null,size:null,clean:null,extras:new Set(),flex:'fix',photos:[],items:{"Zimmer/Büros": 3, "Bäder/WC": 1, "Küchen": 1, "Fenster": 8, "Arbeitsplätze": 0, "Balkone": 1},step:1};
+
+const g=$('#svcGrid');
+g.innerHTML=SVC.map(s=>`<button type="button" class="svc" data-k="${s.k}">${s.tag?'<span class="tag">'+s.tag+'</span>':''}${ic(s.i)}<span>${s.n}</span><small>${s.d}</small></button>`).join('');
+g.addEventListener('click',e=>{const b=e.target.closest('.svc');if(!b)return;selectSvc(b.dataset.k);setTimeout(()=>go(2),180);});
+function selectSvc(k){S.svc=k;$$('#svcGrid .svc').forEach(x=>x.classList.toggle('on',x.dataset.k===k));$('#err-svc').classList.remove('on');configDetails();}
+
+$('#svcList').innerHTML=SVC.map(s=>`<div class="svc-card">${ic(s.i)}<h3>${s.n}</h3><p>${s.long}</p><button type="button" data-start="${s.k}">Offerte anfordern ${ic('arrow')}</button></div>`).join('');
+$('#svcList').addEventListener('click',e=>{const b=e.target.closest('[data-start]');if(!b)return;selectSvc(b.dataset.start);go(2);$('#anfrage').scrollIntoView({behavior:'smooth'});});
+
+function chipGroup(el,opts,{multi=false,get,set}){
+  el.innerHTML=opts.map(o=>`<button type="button" class="chip" data-v="${o}">${o}</button>`).join('');
+  const sync=()=>el.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',multi?get().has(c.dataset.v):get()===c.dataset.v));
+  el.onclick=e=>{const c=e.target.closest('.chip');if(!c)return;const v=c.dataset.v;
+    if(multi){const s=get();s.has(v)?s.delete(v):s.add(v);}else set(v);sync();estimate();};
+  sync();
+}
+function seg(id,cb){const el=$(id);el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;el.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));cb&&cb(b.dataset.v);estimate();});}
+const segVal=id=>($(id+' button.on')||{}).dataset?.v;
+
+const SZ={"end": ["1–1.5 Zi", "2–2.5 Zi", "3–3.5 Zi", "4–4.5 Zi", "5+ Zi / Haus"], "wohnung": ["1–1.5 Zi", "2–2.5 Zi", "3–3.5 Zi", "4–4.5 Zi", "5+ Zi / Haus"], "grund": ["1–1.5 Zi", "2–2.5 Zi", "3–3.5 Zi", "4–4.5 Zi", "5+ Zi / Haus"], "buero": ["bis 100 m²", "100–250 m²", "250–500 m²", "500–1000 m²", "1000+ m²"], "praxis": ["bis 100 m²", "100–250 m²", "250–500 m²", "500–1000 m²", "1000+ m²"], "unterhalt": ["bis 100 m²", "100–250 m²", "250–500 m²", "500–1000 m²", "1000+ m²"], "fenster": ["bis 10 Fenster", "11–25 Fenster", "26–50 Fenster", "50+ Fenster"], "treppe": ["1–2 Etagen", "3–4 Etagen", "5–6 Etagen", "7+ Etagen"], "bau": ["bis 100 m²", "100–250 m²", "250–500 m²", "500+ m²"]},SZL={"end": "Wohnungsgrösse", "wohnung": "Wohnungsgrösse", "grund": "Wohnungsgrösse", "buero": "Bürofläche", "praxis": "Praxisfläche", "unterhalt": "Fläche", "fenster": "Anzahl Fenster", "treppe": "Grösse Treppenhaus", "bau": "Fläche"},UMF={"end": ["Endreinigung", "Mit Abnahmegarantie"], "wohnung": ["Wöchentlich", "Alle 2 Wochen", "Monatlich"], "buero": ["2× pro Woche", "Täglich", "Wöchentlich", "Einmalig"], "praxis": ["Täglich", "2× pro Woche", "Wöchentlich", "Einmalig"], "unterhalt": ["Wöchentlich", "2× pro Woche", "Täglich", "Einmalig"], "treppe": ["Wöchentlich", "Alle 2 Wochen"], "fenster": ["Innen", "Innen + aussen"]},EX={"end": ["Fenster inkl. Storen", "Backofen & Kühlschrank", "Keller/Estrich", "Balkon"], "buero": ["Fensterreinigung", "Kaffeeküche", "Abfallentsorgung", "Ausserhalb Bürozeiten"], "praxis": ["Desinfektion Flächen", "Wartezimmer", "Ausserhalb Sprechzeiten"], "wohnung": ["Bügeln", "Fenster", "Eigene Reinigungsmittel"], "unterhalt": ["Teppichreinigung", "Sanitär verstärkt", "Abfallentsorgung"], "treppe": ["Lift reinigen", "Eingang und Umgebung"], "fenster": ["Storen", "Rahmen", "Wintergarten"], "grund": ["Fenster", "Teppiche", "Polstermöbel"], "bau": ["Grobreinigung", "Feinreinigung", "Fenster"]},BASES={"end": [450, 650, 850, 1100, 1500], "wohnung": [110, 140, 170, 210, 260], "grund": [350, 500, 700, 900, 1250], "buero": [90, 160, 280, 480, 800], "praxis": [110, 190, 320, 540, 900], "unterhalt": [90, 160, 280, 480, 800], "treppe": [80, 120, 160, 220], "fenster": [180, 380, 700, 1200], "bau": [600, 1300, 2400, 3800]},MULT={"Mit Abnahmegarantie": 1.15, "Einmalig": 1.3, "Innen + aussen": 1.7},PER={"Täglich": 21, "2× pro Woche": 8.7, "Wöchentlich": 4.3, "Alle 2 Wochen": 2.2, "Monatlich": 1};
+function configDetails(){
+  const k=S.svc;
+  $('#sizeLbl').firstChild.textContent=(SZL[k]||'Grösse')+' ';
+  S.size=null;
+  chipGroup($('#f-size'),SZ[k],{get:()=>S.size,set:v=>{S.size=v;$('#err-size').classList.remove('on');}});
+  const u=UMF[k];$('#g-clean').hidden=!u;S.clean=u?u[0]:null;
+  if(u)chipGroup($('#f-clean'),u,{get:()=>S.clean,set:v=>S.clean=v});
+  S.extras=new Set();
+  chipGroup($('#f-extra'),EX[k]||[],{multi:true,get:()=>S.extras});
+  $('#addrB').hidden=true;$('#addrALbl').textContent='Objektadresse';
+  estimate();
+}
+function estimate(){
+  if(!S.svc)return;
+  const idx=Math.max(0,$$('#f-size .chip').findIndex(c=>c.classList.contains('on')));
+  let v=(BASES[S.svc]||[0])[idx]||0,suf='';
+  const opt=(!$('#g-clean').hidden&&S.clean)?S.clean:null;
+  if(opt&&MULT[opt])v*=MULT[opt];
+  if(opt&&PER[opt]){v*=PER[opt];suf=' pro Monat';}
+  v+=S.extras.size*Math.max(40,v*.06);
+  if(segVal('#a-lift')==='__')v*=1.08;
+  const r=x=>Math.round(x/10)*10;
+  S.est=[r(v*.85),r(v*1.15)];
+  $('#estVal').textContent=S.size?chf(S.est[0])+' – '+chf(S.est[1]).replace('CHF ','')+suf:'Grösse wählen für Schätzung';
+}
+seg('#f-flex',v=>S.flex=v);seg('#a-lift');seg('#b-lift');seg('#c-sal');seg('#c-way');
+['#a-fl','#b-fl'].forEach(s=>$(s).addEventListener('change',estimate));
+
+// date default
+const d=new Date();d.setDate(d.getDate()+21);$('#f-date').value=d.toISOString().slice(0,10);$('#f-date').min=new Date().toISOString().slice(0,10);
+
+// photos
+$('#f-photos').addEventListener('change',e=>{
+  [...e.target.files].slice(0,12-S.photos.length).forEach(f=>{const r=new FileReader();r.onload=()=>{S.photos.push(r.result);renderThumbs();};r.readAsDataURL(f);});
+  e.target.value='';
+});
+function renderThumbs(){$('#thumbs').innerHTML=S.photos.map((p,i)=>`<div><img src="${p}" alt="Foto ${i+1}"><button type="button" data-rm="${i}" aria-label="Foto entfernen">×</button></div>`).join('');}
+$('#thumbs').addEventListener('click',e=>{const b=e.target.closest('[data-rm]');if(!b)return;S.photos.splice(+b.dataset.rm,1);renderThumbs();});
+function renderItems(){$('#items').innerHTML=Object.entries(S.items).map(([k,v])=>`<div class="item"><span>${k}</span><div class="stepper"><button type="button" data-it="${k}" data-d="-1" aria-label="${k} weniger">−</button><output class="tnum">${v}</output><button type="button" data-it="${k}" data-d="1" aria-label="${k} mehr">+</button></div></div>`).join('');}
+$('#items').addEventListener('click',e=>{const b=e.target.closest('[data-it]');if(!b)return;const k=b.dataset.it;S.items[k]=Math.max(0,S.items[k]+(+b.dataset.d)*(k==='Arbeitsplätze'?5:1));renderItems();});
+renderItems();
+
+/* ---------- Wizard nav ---------- */
+const TITLES=["Was dürfen wir für Sie reinigen?", "Erzählen Sie uns mehr", "Wo ist das Objekt?", "Fotos und Details", "Fast geschafft!"];
+function setSteps(sel,n,total){$$(sel+' .st').forEach((s,i)=>{s.classList.toggle('done',i<n-1);s.classList.toggle('cur',i===n-1);});}
+function go(n){
+  S.step=n;
+  $$('#wz .pane').forEach(p=>p.classList.toggle('on',+p.dataset.step===n));
+  const done=n===6;
+  $('#wzFoot').hidden=done;$('#wzSteps').hidden=done;
+  $('#wzTitle').textContent=done?'Anfrage gesendet':TITLES[n-1];
+  $('#wzSub').textContent=done?'Wir melden uns in Kürze':'Kostenlos Offerten erhalten, Schritt '+n+' von 5';
+  $('#wzBack').hidden=n===1;
+  $('#wzNext').innerHTML=n===5?'Anfrage kostenlos senden '+ic('send'):n===4?'Weiter '+ic('arrow'):'Weiter '+ic('arrow');
+  setSteps('#wzSteps',n);paintIcons($('#wz'));
+  if(n===2)estimate();
+}
+function req(id,errId,test){const el=$(id);const ok=test?test(el.value):el.value.trim().length>1;el.classList.toggle('err',!ok);$(errId).classList.toggle('on',!ok);return ok;}
+function validate(n){
+  if(n===1){if(!S.svc){$('#err-svc').classList.add('on');return false;}return true;}
+  if(n===2){let ok=true;if(!$('#f-date').value){ok=false;$('#err-date').classList.add('on');}else $('#err-date').classList.remove('on');if(!S.size){ok=false;$('#err-size').classList.add('on');}return ok;}
+  if(n===3){let ok=req('#a-plz','#err-a');if(!$('#addrB').hidden)ok=req('#b-plz','#err-b')&&ok;return ok;}
+  if(n===5){
+    let ok=req('#c-fn','#err-fn');ok=req('#c-ln','#err-ln')&&ok;
+    ok=req('#c-em','#err-em',v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))&&ok;
+    ok=req('#c-ph','#err-ph',v=>v.replace(/\D/g,'').length>=9)&&ok;
+    const c=$('#c-ok').checked;$('#err-ok').classList.toggle('on',!c);return ok&&c;}
+  return true;
+}
+$('#wzNext').addEventListener('click',()=>{if(!validate(S.step)){const e=$('#wz .pane.on .err, #wz .pane.on .errmsg.on');e&&e.scrollIntoView({block:'center',behavior:'smooth'});return;}if(S.step===5){submitReq();return;}go(S.step+1);});
+$('#wzBack').addEventListener('click',()=>go(Math.max(1,S.step-1)));
+$('#wz').addEventListener('submit',e=>e.preventDefault());
+$('#wz').addEventListener('input',e=>{if(e.target.classList.contains('err'))e.target.classList.remove('err');});
+$('#wzReset').addEventListener('click',()=>{S.svc=null;$$('#svcGrid .svc').forEach(x=>x.classList.remove('on'));['#c-fn','#c-ln','#c-em','#c-ph','#c-note','#a-str','#a-plz','#b-str','#b-plz'].forEach(s=>$(s).value='');$('#c-ok').checked=false;S.photos=[];renderThumbs();go(1);});
+
+function fmtDate(v){const [y,m,dd]=v.split('-');return dd+'.'+m+'.'+y;}
+function submitReq(){
+  const ref='RS-'+(2600+Math.floor(Math.random()*399));
+  $('#okRef').textContent=ref;$('#okName').textContent=$('#c-fn').value.trim();$('#okMail').textContent=$('#c-em').value.trim();
+  const svc=SVC.find(s=>s.k===S.svc);
+  const city=v=>v.replace(/^\d{4}\s*/,'').trim()||v;
+  const single=$('#addrB').hidden;
+  const items=Object.entries(S.items).filter(([,v])=>v>0).map(([k,v])=>k+' '+v).join(', ');
+  const ph=$('#c-ph').value.replace(/\s+/g,' ').trim();
+  LEADS.unshift({src:BRAND,id:ref,date:'28.09.2026',from:city($('#a-plz').value),to:single?'':city($('#b-plz').value),obj:S.size,svc:svc.n,status:'Neu',move:fmtDate($('#f-date').value)+(S.flex!=='fix'?' ('+S.flex+' Tage)':''),
+    fa:$('#a-fl').value+', '+(segVal('#a-lift')==='ja'?'Lift':'kein Lift'),fb:(S.clean&&!$('#g-clean').hidden)?S.clean:'–',
+    photos:S.photos.length,imgs:S.photos.slice(0,8),items:items||'keine Angaben',extras:[...S.extras],note:$('#c-note').value.trim(),
+    name:$('#c-sal .on').dataset.v+' '+$('#c-ln').value.trim(),phone:ph,mail:$('#c-em').value.trim(),est:S.est,fresh:true});
+  renderDash();
+  go(6);toast('Anfrage '+ref+' gesendet');
+  $('#anfrage').scrollIntoView({behavior:'smooth'});
+}
+
+// accept buttons in showcase
+$$('.accept').forEach(b=>b.addEventListener('click',()=>{$$('.accept').forEach(x=>{x.classList.remove('done');x.textContent='Annehmen';});b.classList.add('done');b.textContent='✓ Angenommen';toast('Beispiel: Angebot angenommen');}));
+
+/* ================= PARTNER ================= */
+const BRAND='reinigungscout.ch';
+let LEADS=[
+ {"id": "L-4121", "date": "28.09.2026", "from": "Zug", "to": "", "obj": "100–250 m²", "svc": "Büroreinigung", "status": "Neu", "move": "ab 01.11.2026", "fa": "2. Stock, Lift", "fb": "2× pro Woche", "photos": 6, "items": "Zimmer/Büros 6, Bäder/WC 2, Küchen 1, Fenster 12, Arbeitsplätze 8", "extras": ["Kaffeeküche", "Ausserhalb Bürozeiten"], "note": "Anwaltskanzlei, Reinigung ab 18:30. Vertraulichkeitserklärung nötig.", "name": "Kanzlei Huber & Partner", "phone": "+41 41 710 33 20", "mail": "office@beispiel.ch", "est": [1180, 1600]},
+ {"id": "L-4118", "date": "28.09.2026", "from": "Zürich-Oerlikon", "to": "", "obj": "3–3.5 Zi", "svc": "Endreinigung", "status": "Neu", "move": "30.11.2026", "fa": "3. Stock, Lift", "fb": "Mit Abnahmegarantie", "photos": 8, "items": "Zimmer/Büros 3, Bäder/WC 1, Küchen 1, Fenster 9, Balkone 1", "extras": ["Backofen & Kühlschrank"], "note": "Kam über umzugscout.ch: Umzug am 28.11.", "name": "Frau Meier", "phone": "+41 78 220 45 91", "mail": "meier@beispiel.ch", "est": [830, 1120], "src": "umzugscout.ch"},
+ {"id": "L-4112", "date": "27.09.2026", "from": "Bern", "to": "", "obj": "100–250 m²", "svc": "Praxisreinigung", "status": "Angerufen", "move": "ab 15.10.2026", "fa": "Erdgeschoss, kein Lift", "fb": "Täglich", "photos": 9, "items": "Zimmer/Büros 6, Bäder/WC 2, Arbeitsplätze 5", "extras": ["Desinfektion Flächen"], "note": "Reinigung nach 18 Uhr.", "name": "Praxis Dr. Schmid", "phone": "+41 31 330 12 04", "mail": "praxis@beispiel.ch", "est": [3390, 4590], "unlocked": true},
+ {"id": "L-4109", "date": "27.09.2026", "from": "St. Gallen", "to": "", "obj": "3–4 Etagen", "svc": "Treppenhaus", "status": "Neu", "move": "ab sofort", "fa": "4 Etagen, Lift", "fb": "Wöchentlich", "photos": 3, "items": "Fenster 8", "extras": [], "note": "", "name": "Verwaltung Brunner", "phone": "+41 71 880 71 55", "mail": "verwaltung@beispiel.ch", "est": [440, 590]},
+ {"id": "L-4102", "date": "26.09.2026", "from": "Luzern", "to": "", "obj": "250–500 m²", "svc": "Unterhaltsreinigung", "status": "Offerte gesendet", "move": "ab 01.10.2026", "fa": "1. Stock, Lift", "fb": "Wöchentlich", "photos": 5, "items": "Arbeitsplätze 22, Bäder/WC 4, Küchen 1", "extras": ["Abfallentsorgung"], "note": "", "name": "Treuhand Steiner AG", "phone": "+41 41 510 22 30", "mail": "steiner@beispiel.ch", "est": [1020, 1390], "unlocked": true, "offer": 1290}
+];
+const OFFERS=[{"r": "Zürich · Büro 120 m²", "p": 980, "v": "20.10.2026", "s": "Angesehen"}, {"r": "Winterthur · Endreinigung", "p": 890, "v": "19.10.2026", "s": "Offen"}, {"r": "Baar · Praxis", "p": 2650, "v": "21.10.2026", "s": "Offen"}];
+const JOBS=[["Zug · Kanzlei Huber", "30.09.2026", "Geplant"], ["Thun · Endreinigung", "02.10.2026", "Geplant"], ["Basel · Büro", "05.10.2026", "Bestätigt"], ["Luzern · Treuhand", "08.10.2026", "Bestätigt"], ["Chur · Treppenhaus", "12.10.2026", "In Vorbereitung"]];
+let credits=8,tab='overview';
+const stPill=s=>({'Neu':'blue','Angerufen':'orange','Offerte gesendet':'green','Geplant':'blue','Bestätigt':'green','In Vorbereitung':'orange','Offen':'gray','Angesehen':'blue'}[s]||'gray');
+const route=l=>l.to?l.from+' → '+l.to:l.from;
+
+function leadTable(rows){
+  return `<div class="tbl-wrap"><table><thead><tr><th>Eingang</th><th>Portal</th><th>Ort</th><th>Objekt</th><th>Leistung</th><th>Fotos</th><th>Status</th><th></th></tr></thead><tbody>${
+   rows.map(l=>`<tr class="${l.fresh?'new':''}"><td class="tnum">${l.date}</td><td><span class="src ${(l.src||BRAND).split('.')[0]}">${l.src||BRAND}</span></td><td><b>${route(l)}</b></td><td>${l.obj}</td><td>${l.svc}</td><td class="tnum">${l.photos}</td><td><span class="pill ${stPill(l.status)}">${l.status}</span></td><td><button class="btn btn-primary btn-sm" data-lead="${l.id}">Ansehen</button></td></tr>`).join('')}</tbody></table></div>`;
+}
+function renderDash(){
+  const nNew=LEADS.filter(l=>l.status==='Neu').length;
+  $('#ctLeads').textContent=nNew;$('#kNew').textContent=nNew;
+  $('#kOff').textContent=OFFERS.length+LEADS.filter(l=>l.status==='Offerte gesendet'&&!l.offer).length;
+  $('#credits').textContent=credits;
+  let h='';
+  if(tab==='overview'){
+    h=`<div class="dpanel-title"><b>Neue Leads</b><button class="btn btn-ghost btn-sm" data-tabgo="leads">Alle anzeigen</button></div>${leadTable(LEADS.slice(0,5))}
+    <div class="cols2">
+      <div class="box"><b>Ihre nächsten Anrufe</b><div class="calls">${[['09:30','Familie Keller','Zürich'],['10:15','Herr Meier','Winterthur'],['11:00','Frau Schmid','Bern'],['13:30','Firma Steiner AG','Luzern']].map(c=>`<div><time class="tnum">${c[0]}</time><span>${c[1]} <small style="color:var(--muted)">· ${c[2]}</small></span><span class="pill blue">${ic('phone')} Anrufen</span></div>`).join('')}</div></div>
+      <div class="box"><b>Leads bearbeiten</b><div class="flow">
+        <div><span class="n ok">✓</span><p><b>Lead abholen</b><small>Vorgefilterte Anfragen aus Ihrem Gebiet</small></p></div>
+        <div><span class="n cur">2</span><p><b>Kunden kontaktieren</b><small>Anrufen und Eckdaten bestätigen</small></p></div>
+        <div><span class="n">3</span><p><b>Offerte senden</b><small>Vorlage wählen, Preis anpassen</small></p></div>
+        <div><span class="n">4</span><p><b>Auftrag sichern</b><small>Bestätigung erscheint im Kalender</small></p></div>
+      </div></div>
+    </div>`;
+  } else if(tab==='leads'){
+    h=`<div class="dpanel-title"><b>Alle Leads (${LEADS.length})</b><span class="pill gray">Filter: ZH, BE, LU, SG, BS, ZG</span></div>${leadTable(LEADS)}`;
+  } else if(tab==='offers'){
+    const sent=LEADS.filter(l=>l.status==='Offerte gesendet'&&l.sentTotal).map(l=>({r:route(l),p:l.sentTotal,v:'12.10.2026',s:'Offen'}));
+    const all=[...sent,...OFFERS];
+    h=`<div class="dpanel-title"><b>Offene Angebote</b></div><div class="tbl-wrap"><table><thead><tr><th>Ort</th><th>Betrag</th><th>Gültig bis</th><th>Status</th></tr></thead><tbody>${all.map(o=>`<tr><td><b>${o.r}</b></td><td class="tnum">${chf(o.p)}</td><td class="tnum">${o.v}</td><td><span class="pill ${stPill(o.s)}">${o.s}</span></td></tr>`).join('')}</tbody></table></div>`;
+  } else if(tab==='jobs'){
+    h=`<div class="dpanel-title"><b>Aktuelle Aufträge</b></div><div class="tbl-wrap"><table><thead><tr><th>Ort</th><th>Datum</th><th>Status</th></tr></thead><tbody>${JOBS.map(j=>`<tr><td><b>${j[0]}</b></td><td class="tnum">${j[1]}</td><td><span class="pill ${stPill(j[2])}">${j[2]}</span></td></tr>`).join('')}</tbody></table></div>`;
+  } else {
+    h=`<div class="dpanel-title"><b>Kalender Oktober 2026</b></div><div class="tbl-wrap"><table><thead><tr><th>Datum</th><th>Auftrag</th><th>Team</th></tr></thead><tbody>${JOBS.map((j,i)=>`<tr><td class="tnum">${j[1]}</td><td><b>${j[0]}</b></td><td>Team ${i%2?'B':'A'} · ${2+i%2} Personen</td></tr>`).join('')}</tbody></table></div>`;
+  }
+  $('#tabBody').innerHTML=h;paintIcons($('#tabBody'));
+  LEADS.forEach(l=>l.fresh=false);
+}
+$('#view-partner').addEventListener('click',e=>{
+  const t=e.target.closest('[data-tab],[data-tabgo]');
+  if(t){tab=t.dataset.tab||t.dataset.tabgo;$$('.dnav').forEach(n=>n.classList.toggle('on',n.dataset.tab===tab));renderDash();return;}
+  const l=e.target.closest('[data-lead]');if(l)openLead(l.dataset.lead);
+});
+
+/* ---------- Drawer / offer builder ---------- */
+let cur=null,lines=[];
+function defaultLines(l){
+  const mid=l.est?(l.est[0]+l.est[1])/2:900,r=x=>Math.round(x/10)*10;
+  if(l.offer)return [['Unterhaltsreinigung gemäss Plan, pro Monat',l.offer]];
+  if(/Täglich|pro Woche|Wöchentlich|2 Wochen|Monatlich/.test(l.fb))return [['Reinigung gemäss Plan ('+l.fb+'), pro Monat',r(mid*.8)],['Sanitär und Küche',r(mid*.15)],['Reinigungsmittel und Material',r(mid*.05)]];
+  const a=[['Endreinigung '+l.obj,r(mid*.8)],['Fenster und Storen',r(mid*.15)],['Material',r(mid*.05)]];
+  if(/Abnahmegarantie/.test(l.fb))a.push(['Abnahmegarantie',0]);
+  return a;
+}
+function openLead(id){
+  cur=LEADS.find(l=>l.id===id);if(!cur)return;lines=cur.lines||defaultLines(cur);
+  $('#dTitle').textContent=route(cur);drawLead();
+  $('#drawer').classList.add('on');$('#dbg').classList.add('on');
+}
+function closeLead(){$('#drawer').classList.remove('on');$('#dbg').classList.remove('on');}
+$('#dClose').onclick=closeLead;$('#dbg').onclick=closeLead;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLead();});
+function mask(p){const d=p.replace(/\s/g,'');return d.slice(0,3)+' '+d.slice(3,5)+' *** ** '+d.slice(-2);}
+function drawLead(){
+  const l=cur,sent=l.status==='Offerte gesendet';
+  const imgs=l.imgs&&l.imgs.length?l.imgs.map(s=>`<span><img src="${s}" alt=""></span>`).join(''):['Küche','Wohnen','Schlafen','Keller'].slice(0,Math.min(4,l.photos||0)).map(x=>`<span>${x}</span>`).join('');
+  $('#dBody').innerHTML=`
+   <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="pill ${stPill(l.status)}">${l.status}</span><span class="pill gray">${l.id}</span><span class="src ${(l.src||BRAND).split('.')[0]}">via ${l.src||BRAND}</span><span class="pill gray">${l.svc}</span></div>
+   <div class="facts">
+     <div><small>Wunschtermin</small><b>${l.move}</b></div><div><small>Objekt</small><b>${l.obj}</b></div>
+     <div><small>Ort · ${l.from}</small><b>${l.fa}</b></div><div><small>Häufigkeit / Art</small><b>${l.fb}</b></div>
+     <div style="grid-column:1/-1"><small>Details</small><b style="font-weight:600">${l.items}</b></div>
+     ${l.extras.length?`<div style="grid-column:1/-1"><small>Zusatzleistungen</small><b>${l.extras.join(', ')}</b></div>`:''}
+     ${l.note?`<div style="grid-column:1/-1"><small>Hinweis vom Kunden</small><b style="font-weight:600">${l.note.replace(/</g,'&lt;')}</b></div>`:''}
+   </div>
+   ${l.photos?`<div><p class="lbl" style="margin-bottom:8px">Fotos (${l.photos})</p><div class="phgrid">${imgs}</div></div>`:''}
+   <div class="contactbox">${l.unlocked?`<div><small style="color:var(--muted);font-weight:600">Kontakt</small><br><b>${l.name.replace(/</g,'&lt;')}</b> · <span style="user-select:all">${l.phone.replace(/</g,'&lt;')}</span><br><small style="color:var(--muted)">${l.mail.replace(/</g,'&lt;')}</small></div><span class="pill green">${ic('check')} Freigeschaltet</span>`
+     :`<div><small style="color:var(--muted);font-weight:600">Kontakt</small><br><span class="mask">${mask(l.phone)}</span></div><button class="btn btn-dark btn-sm" id="unlock">${ic('lock')} Lead freischalten (1 Credit)</button>`}</div>
+   <div class="box" style="gap:10px">
+     <div class="dpanel-title"><b>Offerte erstellen</b>${l.est?`<small style="color:var(--muted)">Kundenschätzung ${chf(l.est[0])}–${chf(l.est[1]).replace('CHF ','')}</small>`:''}</div>
+     <div id="olines" style="display:grid;gap:8px"></div>
+     <button class="addline" id="addline" ${sent?'disabled':''}>+ Position hinzufügen</button>
+     <div class="totals" id="totals"></div>
+   </div>`;
+  drawLines();
+  $('#dFoot').innerHTML=sent?`<button class="btn btn-ghost" id="dDone">Schliessen</button><span class="btn" style="background:var(--green-bg);color:var(--green)">${ic('check')} Offerte gesendet</span>`
+   :`<button class="btn btn-ghost" id="dDone">Später</button><button class="btn btn-primary" id="sendOffer">${ic('send')} Offerte senden</button>`;
+  paintIcons($('#drawer'));
+  $('#dDone').onclick=closeLead;
+  const u=$('#unlock');if(u)u.onclick=()=>{if(credits<=0){toast('Kein Guthaben mehr');return;}credits--;l.unlocked=true;if(l.status==='Neu')l.status='Angerufen';renderDash();drawLead();toast('Lead freigeschaltet. Jetzt anrufen!');};
+  const s=$('#sendOffer');if(s)s.onclick=()=>{const tot=total();if(tot<=0){toast('Bitte Preise eintragen');return;}l.status='Offerte gesendet';l.lines=lines;l.sentTotal=tot;l.unlocked=true;renderDash();drawLead();toast('Offerte über '+chf(tot)+' an Kunden gesendet');};
+  $('#addline').onclick=()=>{lines.push(['Neue Position',0]);drawLines();const ins=$$('#olines .inp');ins[ins.length-2].focus();};
+}
+const total=()=>lines.reduce((a,x)=>a+(+x[1]||0),0)*1.081;
+function drawLines(){
+  const sent=cur.status==='Offerte gesendet';
+  $('#olines').innerHTML=lines.map((x,i)=>`<div class="oline"><input class="inp" data-li="${i}" data-f="0" value="${String(x[0]).replace(/"/g,'&quot;')}" ${sent?'disabled':''} aria-label="Position"><input class="inp tnum" data-li="${i}" data-f="1" type="number" min="0" step="10" value="${x[1]}" ${sent?'disabled':''} aria-label="Preis CHF"><button data-del="${i}" ${sent?'disabled':''} aria-label="Position löschen">×</button></div>`).join('');
+  drawTotals();
+}
+function drawTotals(){const net=lines.reduce((a,x)=>a+(+x[1]||0),0);$('#totals').innerHTML=`<div><span>Zwischensumme</span><span class="tnum">${chf(net)}</span></div><div><span>MwSt. 8.1 %</span><span class="tnum">${chf(net*.081)}</span></div><div class="t"><span>Total</span><span class="tnum">${chf(net*1.081)}</span></div>`;}
+$('#drawer').addEventListener('input',e=>{const t=e.target;if(t.dataset.li==null)return;lines[+t.dataset.li][+t.dataset.f]=t.dataset.f==='1'?+t.value:t.value;drawTotals();});
+$('#drawer').addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(!b)return;lines.splice(+b.dataset.del,1);drawLines();});
+
+/* ---------- Partner registration ---------- */
+const R={step:1,svcs:new Set(["Büroreinigung", "Praxisreinigung"]),kant:new Set(['ZH'])};
+const RSV=["Büroreinigung", "Praxisreinigung", "Endreinigung", "Unterhaltsreinigung", "Wohnungsreinigung", "Fensterreinigung", "Treppenhaus", "Grundreinigung", "Baureinigung"];
+const KT=['ZH','BE','LU','UR','SZ','OW','NW','GL','ZG','FR','SO','BS','BL','SH','AR','AI','SG','GR','AG','TG','TI','VD','VS','NE','GE','JU'];
+function rChips(el,opts,set,errId,extra){el.innerHTML=opts.map(o=>`<button type="button" class="chip ${extra||''}" data-v="${o}">${o}</button>`).join('');
+  const sync=()=>el.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',set.has(c.dataset.v)));
+  el.onclick=e=>{const c=e.target.closest('.chip');if(!c)return;set.has(c.dataset.v)?set.delete(c.dataset.v):set.add(c.dataset.v);$(errId).classList.remove('on');sync();};sync();}
+rChips($('#r-svcs'),RSV,R.svcs,'#err-rsvcs');rChips($('#r-kant'),KT,R.kant,'#err-rkant','kanton');
+$('#r-km').addEventListener('input',e=>$('#r-kmv').textContent=e.target.value+' km');
+const RT=['Firmenangaben','Leistungen und Einsatzgebiet','Kontakt und Paket'];
+function rgo(n){R.step=n;$$('#rz .pane').forEach(p=>p.classList.toggle('on',+p.dataset.step===n));const done=n===4;
+  $('#rz .wz-foot').hidden=done;$('#rzSteps').hidden=done;$('#rzTitle').textContent=done?'Registrierung eingegangen':RT[n-1];$('#rzSub').textContent=done?'Wir prüfen Ihre Angaben':'Schritt '+n+' von 3';
+  $('#rzBack').hidden=n===1;$('#rzNext').innerHTML=n===3?'Kostenlos registrieren '+ic('arrow'):'Weiter '+ic('arrow');setSteps('#rzSteps',n);paintIcons($('#rz'));}
+function rval(n){
+  if(n===1){let ok=req('#r-firm','#err-rfirm');return req('#r-plz','#err-rplz')&&ok;}
+  if(n===2){let ok=true;if(!R.svcs.size){$('#err-rsvcs').classList.add('on');ok=false;}if(!R.kant.size){$('#err-rkant').classList.add('on');ok=false;}return ok;}
+  if(n===3){let ok=req('#r-fn','#err-rfn');ok=req('#r-ln','#err-rln')&&ok;ok=req('#r-em','#err-rem',v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))&&ok;ok=req('#r-ph','#err-rph',v=>v.replace(/\D/g,'').length>=9)&&ok;const c=$('#r-ok').checked;$('#err-rok').classList.toggle('on',!c);return ok&&c;}
+  return true;}
+$('#rzNext').addEventListener('click',()=>{if(!rval(R.step))return;if(R.step===3){$('#rOkFirm').textContent=$('#r-firm').value.trim();$('#rOkPk').textContent=document.querySelector('input[name=pk]:checked').value;$('#rOkKant').textContent=[...R.kant].join(', ');rgo(4);toast('Registrierung gesendet');$('#p-register').scrollIntoView({behavior:'smooth'});return;}rgo(R.step+1);});
+$('#rzBack').addEventListener('click',()=>rgo(Math.max(1,R.step-1)));
+$('#rz').addEventListener('submit',e=>e.preventDefault());
+$('#rz').addEventListener('input',e=>{if(e.target.classList.contains('err'))e.target.classList.remove('err');});
+$$('.pick').forEach(a=>a.addEventListener('click',()=>{const r=document.querySelector('input[name=pk][value="'+a.dataset.pk+'"]');if(r)r.checked=true;}));
+
+/* ---------- Checklist ---------- */
+const CL=$$('#checklist input');
+function clUpd(){const n=CL.filter(c=>c.checked).length;$('#clCount').textContent=n+' von '+CL.length+' erledigt';try{localStorage.setItem('rs-cl',JSON.stringify(CL.map(c=>c.checked)));}catch(e){}}
+try{const s=JSON.parse(localStorage.getItem('rs-cl')||'null');if(s)CL.forEach((c,i)=>c.checked=!!s[i]);}catch(e){}
+CL.forEach(c=>c.addEventListener('change',clUpd));clUpd();
+
+/* ---------- Login ---------- */
+const EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+let lgType='kunde';const LOGGED={kunde:false,firma:false};
+const LGTXT={
+ kunde:{t:'Willkommen zurück',s:'Melden Sie sich an, um Ihre Anfragen und Offerten zu sehen.',alt:'Noch kein Konto? <a href="#anfrage" data-close>Anfrage starten</a>. Ihr Konto wird dabei automatisch erstellt.'},
+ firma:{t:'B2B-Login für Partner',s:'Ein Login für alle Scout-Portale. Ihre Aufträge laufen zentral über auftragscout.ch.',alt:'Noch kein Partner? <a href="#p-register" data-go="partner" data-anchor="p-register" data-close>Jetzt kostenlos registrieren</a>'}};
+function lgSet(t){lgType=t;$$('.lg-tabs button').forEach(b=>b.classList.toggle('on',b.dataset.lt===t));$('#lgTitle').textContent=LGTXT[t].t;$('#lgSub').textContent=LGTXT[t].s;$('#lgAlt').innerHTML=LGTXT[t].alt;$('#lgInfo').hidden=true;$('#lgForm').hidden=false;$('#lgDone').hidden=true;
+  if(t==='kunde'&&LOGGED.kunde)showAccount();}
+function lgOpen(t){
+  if(t==='firma'&&LOGGED.firma){showView('partner','p-dash');return;}
+  lgSet(t);$('#loginModal').hidden=false;$('#mbg').classList.add('on');if(!(t==='kunde'&&LOGGED.kunde))setTimeout(()=>$('#lg-em').focus(),60);}
+function lgClose(){$('#loginModal').hidden=true;$('#mbg').classList.remove('on');}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-login]');if(b){e.preventDefault();return;}if(e.target.closest('[data-close]'))lgClose();});
+$('.lg-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-lt]');if(b)lgSet(b.dataset.lt);});
+$('#lgClose').onclick=lgClose;$('#mbg').onclick=lgClose;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lgClose();});
+$('#lgForgot').onclick=()=>{const v=$('#lg-em').value.trim(),i=$('#lgInfo');i.hidden=false;i.textContent=EMAIL.test(v)?'Wir haben einen Link zum Zurücksetzen an '+v+' gesendet.':'Geben Sie oben Ihre E-Mail ein, dann senden wir Ihnen einen Link.';};
+$('#lg').addEventListener('input',e=>{if(e.target.classList.contains('err'))e.target.classList.remove('err');});
+$('#lg').addEventListener('submit',e=>{e.preventDefault();
+  let ok=req('#lg-em','#err-lgem',v=>EMAIL.test(v.trim()));ok=req('#lg-pw','#err-lgpw',v=>v.length>=4)&&ok;if(!ok)return;
+  $('#lg-pw').value='';
+  if(lgType==='firma'){LOGGED.firma=true;markLogin('firma','Mein Portal');lgClose();showView('partner','p-dash');toast('Angemeldet als Glanzwerk Reinigung AG');return;}
+  LOGGED.kunde=true;markLogin('kunde','Mein Konto');showAccount();toast('Erfolgreich angemeldet');});
+function markLogin(t,label){const b=$('.login-btn[data-login="'+t+'"]');b.querySelector('span').textContent=label;if(t==='kunde')b.classList.add('in');}
+function showAccount(){
+  const mine=LEADS.find(l=>String(l.id).startsWith('RS-'));
+  const r=mine?route(mine):'Endreinigung Zürich-Oerlikon',id=mine?mine.id:'RS-2481',obj=mine?mine.obj:'3–3.5 Zi';
+  const offs=[["Glanzwerk Reinigung AG", "★ 4.8 · Antwort in 2 Std.", 890], ["Sauberteam GmbH", "★ 4.6 · Antwort in 4 Std.", 960], ["Blitzblank Services", "★ 4.5 · Antwort in 6 Std.", 1040]];
+  $('#lgForm').hidden=true;const d=$('#lgDone');d.hidden=false;
+  d.innerHTML='<h3>Meine Anfragen</h3><p class="lg-sub">Grüezi! Hier sehen Sie den Stand Ihrer Anfrage.</p>'+
+   '<div class="acc-req"><div><b>'+r+'</b><small>'+id+' · '+obj+'</small></div><span class="pill green">3 Offerten</span></div>'+
+   offs.map(o=>'<div class="acc-off"><div><b>'+o[0]+'</b><small>'+o[1]+'</small></div><b class="tnum">'+chf(o[2])+'</b></div>').join('')+
+   '<button type="button" class="btn btn-primary" id="accGo" style="width:100%">Offerten vergleichen</button>'+
+   '<button type="button" class="linkbtn" id="accOut" style="justify-self:center">Abmelden</button>';
+  $('#accGo').onclick=()=>{lgClose();showView('kunden','k-compare');};
+  $('#accOut').onclick=()=>{LOGGED.kunde=false;const b=$('.login-btn[data-login="kunde"]');b.classList.remove('in');b.querySelector('span').textContent='Kunden-Login';lgClose();toast('Abgemeldet');};
+}
+
+/* ---------- Impressum ---------- */
+function impOpen(){$('#impModal').hidden=false;$('#mbg').classList.add('on');}
+function impClose(){$('#impModal').hidden=true;if($('#loginModal').hidden)$('#mbg').classList.remove('on');}
+document.addEventListener('click',e=>{if(e.target.closest('[data-imp]')){e.preventDefault();impOpen();}});
+$('#impClose').onclick=impClose;$('#mbg').addEventListener('click',impClose);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')impClose();});
+if(location.hash==='#impressum')impOpen();
+
+/* ---------- Init ---------- */
+paintIcons();renderDash();go(1);rgo(1);
+const h=(location.hash||'').replace('#','');
+if(h==='partner')showView('partner');
+})();
+</script>
+
+</body>
+</html>
